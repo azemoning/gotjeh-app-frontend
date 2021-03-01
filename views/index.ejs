@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- font googleapis -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+
+    <!-- Title -->
+    <title>Gotjeh: Where Jobs Find You</title>
+</head>
+
+<body>
+    <%- include("partials/navbar.ejs") %>
+
+    <!-- Jumbotron -->
+    <section class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Fill Your Free Time, Get Free Course,<br>Gotjeh!</h1>
+            <p class="sub-display">Bored? Need Money? Need Some New Set of Skills?<br>
+                Don’t Worry We at Gotjeh, Got You!</p>
+            <button class="btn btn-join">Join Now!</button>
+        </div>
+    </section>
+    <!-- End of Jumbotron -->
+
+    <!-- Women Area -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 panel">
+                <div class="row">
+                    <div class="col">
+                        <img class="img-cewek" src="/img/cewek.png" alt="" width="437" height="370">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col dscrb-cwk">
+                    <h2>Your Exquisite Freelance Doesn’t Fall<br>From the Sky</h2>
+                    <a href="#" class="btn btn-seek"><b>Seek Now!</b></a>
+                    <a href="#" class="btn btn-seek"><b>Post a Job</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Women Area -->
+
+    <!-- Start Popular Course -->
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Popular Course</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 popular-course">
+                <div class="row">
+                    <div class="col pop-course">
+                        <img class="foto" src="/img/Graphic design course.jpg" alt="1">
+                        <div class="free">
+                            <a href="/html/deskripsi-course.html">Free</a>
+                        </div>
+                        <p class="ds-course">lorem insump dolor se ammet</p>
+                    </div>
+                    <div class="col pop-course">
+                        <img class="foto" src="/img/Graphic design course.jpg" alt="2">
+                        <div class="free">
+                            <a href="/html/deskripsi-course.html">Free</a>
+                        </div>
+                        <p class="ds-course">lorem insump dolor se ammet</p>
+                    </div>
+                    <div class="col pop-course">
+                        <img class="foto" src="/img/branding course.jpg" alt="3">
+                        <div class="free">
+                            <a href="/html/deskripsi-course.html">Free</a>
+                        </div>
+                        <p class="ds-course">lorem insump dolor se ammet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-view"><b>View More Course</b></a>
+    </div>
+    <!-- End Popular Course -->
+
+    <!-- About Gotjeh -->
+    <div class="section-title text-center">
+        <h2>What They Said About Gotjeh</h2>
+    </div>
+    <section class="smalltron">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 about-gotjeh">
+                    <div class="row">
+                        <div class="col-lg">
+                            <img class="foto-testi" src="/img/circle sam.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h2 class="name-age">Dustin Tiffani, 26</h2>
+                            <p class="subdscrb">Setelah mengikuti course dan mengapply pekerjaan di Website Gotjeh, Saya
+                                akhirnya di hire menjadi freelance
+                                </br>CEO Tokopedia, Terimakasih Gotjeh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Gotjeh -->
+
+    <!-- What We Have -->
+    <div class="we-have text-center">
+        <h2>What We Have</h2>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-10 we-have">
+                <div class="row">
+                    <div class="col">
+                        <p class="angka">100+</p>
+                        <p class="btm-angka">Available Jobs</p>
+                    </div>
+                    <div class="col">
+                        <p class="angka">10+</p>
+                        <p class="btm-angka">Available Courses</p>
+                    </div>
+                    <div class="col">
+                        <p class="angka">300+</p>
+                        <p class="btm-angka">People Found Multiple Jobs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of What We Have -->
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

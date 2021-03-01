@@ -1,20 +1,9 @@
-/* navbar */
-/* .navbar-brand {
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-} */
-
-/* .tombol {
-    text-transform: capitalize;
-    border-radius: 10px;
-    font-size: 16px;
-} */
-
 /* Jumbotron General */
 .jumbotron {
     background-color: #0F1134;
     background-size: cover;
-    background-image: url('../img/image-2.png');
+    background-image: url("/img/image-2.png");
+
 }
 
 .display-4 {
@@ -34,7 +23,9 @@
     color: #212121;
 }
 
-.pop-course1, .pop-course2, .pop-course3 {
+.pop-course1,
+.pop-course2,
+.pop-course3 {
     background: #F9F9F9;
     border: 1px solid rgba(33, 33, 33, 0.1);
     box-sizing: border-box;
@@ -99,12 +90,13 @@
         border-radius: 10px;
         font-size: 24px;
     }
-    
+
     .btn-join:hover {
         display: inline-block;
         background-color: #cf9f00;
         border-radius: 10px;
     }
+
     /* End of Jumbotron */
 
     /* Women Area */
@@ -139,12 +131,13 @@
         margin-top: 20px;
         margin-inline: 19px;
     }
-    
+
     .btn-seek:hover {
         display: inline-block;
         background-color: #cf9f00;
         border-radius: 10px;
-    }    
+    }
+
     /* End of Women Area */
 
     /* Popular Course */
@@ -173,13 +166,14 @@
         margin-top: 30px;
         margin-left: 15px;
     }
-    
+
     .free a {
         border: 1px solid #121212;
         box-sizing: border-box;
         border-radius: 10px;
         text-align: center;
         margin-top: 15px;
+        margin-left: 10px;
         width: 89px;
         height: 24px;
         display: block;
@@ -202,20 +196,6 @@
         border-radius: 10px;
     }
 
-    .free a {
-        border: 1px solid #121212;
-        box-sizing: border-box;
-        border-radius: 10px;
-        text-align: center;
-        margin-top: 15px;
-        margin-left: 10px;
-        width: 89px;
-        height: 24px;
-        display: block;
-        text-decoration: none;
-        color: black;
-    }
-
     .btn-view {
         background-color: #F5C116;
         height: 50px;
@@ -225,7 +205,7 @@
         margin-top: 50px;
         margin-left: 415px;
     }
-    
+
     .btn-view:hover {
         display: inline-block;
         background-color: #cf9f00;
@@ -255,6 +235,7 @@
         border-radius: 50%;
         margin-top: 80px;
     }
+
     .name-age {
         width: 318px;
         height: 30px;
@@ -277,7 +258,8 @@
         line-height: 24px;
         color: #F9F9F9;
         margin-top: 28px;
-    }   
+    }
+
     /* End of About Gotjeh */
 
     /* What We Have */
@@ -310,6 +292,7 @@
         line-height: 24px;
         margin-top: 12px;
     }
+
     /* End of What We Have */
 }
 
