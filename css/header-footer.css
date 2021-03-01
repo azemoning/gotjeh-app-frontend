@@ -1,0 +1,161 @@
+/* navbar */
+.navbar-brand img {
+    height: 50px;
+    width: 110px;
+}
+
+.tombol {
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* desktop version */
+@media (min-width: 992px) {
+
+    .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        text-transform: capitalize;
+        margin-right: 45px;
+        border-bottom: 2px;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid #F5C116;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+    
+    /* Footer */
+    .footertron {
+        height: 345px;
+        background-color: #0F1134;
+        margin-top: 150px;
+    }
+
+    .lggotjeh {
+        margin-top: 31px;
+        width: 109px;
+        height: 50px;
+    }
+
+    .alamat .almt{
+        height: 22px;
+        width: 26px;
+        float:left; margin:0 9px 3px 0;
+    }
+
+    .alamat a {
+        color: #F9F9F9;
+        margin-top: 21px;
+        font-family: Poppins;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        height: 30px;
+        margin-top: 37px;
+    }
+
+    .alamat p {
+        color: #F9F9F9;
+        margin-top: 21px;
+        font-family: Poppins;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        height: 30px;
+        margin-top: 0px;
+        display: block;
+        margin-top: 37px;
+    }
+    
+    .f-menu {
+        color: #F9F9F9;
+        margin-top: 42px;
+        margin-left: 70px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        height: 30px;
+    }
+
+    .menu .mn {
+        color: #F9F9F9;
+        margin: -10px;
+        font-family: Poppins;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        height: 30px;
+        margin-top: 0px;
+        display: block;
+        margin-left: 70px;
+    }
+
+    .f-dropemail {
+        color: #F9F9F9;
+        margin-top: 42px;
+        margin-right: 261px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        height: 30px;
+    }
+
+    input[type=email] {
+        width: 507px;
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-size: 16px;
+        font-family: Poppins;
+        background-color: #FFFFFF;
+        padding: 15px 20px 15px 17px;
+        margin-top: 34px;
+    }
+
+    .btn-submit {
+        background: #F5C116;
+        border-radius: 10px;
+        width: 141px;
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .sosmed {
+        margin-top: 25px;
+    }
+
+    .ssmd {
+        margin-top: 25px;
+        float: left;
+        margin:0 33px 3px 0;
+        width: 25px;
+        height: 25px;
+    }
+
+    #footer{
+        color: #F9F9F9;
+        text-align: center;
+        font-size: 16px;
+        font-family: Poppins;
+        background-color: #0F1134;
+        height: 40px;
+    }
+    /* End of Footer */
+}
