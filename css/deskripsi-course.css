@@ -1,0 +1,98 @@
+/* body {
+    background-color: #f9f9f9;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #0F1134;
+    background-size: cover;
+    height: 528px;
+    margin-top: -77px;
+}
+
+/* Title */
+.title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 46px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 75px;
+}
+
+/* Gambar Deskripsi Job */
+.gmbr {
+    width: 790px;
+    height: 508px;
+    margin-top: 75px;
+    margin-left: -101px;
+}
+
+/* Deskripsi */
+.descript {
+    margin-top: 5px;
+}
+
+.isi-deskripsi {
+    margin-top: 35px;
+}
+
+.babi {
+    margin-left: 30px;
+}
+
+.deskripsi-bab1 {
+    margin-left: 45px;
+}
+
+.babii {
+    margin-top: 34px;
+    margin-bottom: 10px;
+    margin-left: 110px;
+}
+.deskripsi-bab2 {
+    margin-bottom: -65px;
+    margin-left: 125px;
+}
+
+h3 {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 46px;
+    margin-bottom: 20px;
+}
+
+.deskripsi {
+    text-align: justify;
+    margin-top: 20px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.desc {
+    margin-left: 80px;
+    width: 794px;
+
+}
+/* Tombol */
+.btn-mulai {
+    color: black;
+    background-color: #f5c116;
+    border-radius: 10px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 37px;
+    width: 638px;
+    height: 68px;
+    margin-top: 299px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,364 @@
+/* navbar */
+/* .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+} */
+
+/* .tombol {
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-size: 16px;
+} */
+
+/* Jumbotron General */
+.jumbotron {
+    background-color: #0F1134;
+    background-size: cover;
+    background-image: url('../img/image-2.png');
+}
+
+.display-4 {
+    font-weight: 700;
+}
+
+.sub-display {
+    font-weight: 400;
+}
+
+/* Popular Course General */
+.section-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    color: #212121;
+}
+
+.pop-course1, .pop-course2, .pop-course3 {
+    background: #F9F9F9;
+    border: 1px solid rgba(33, 33, 33, 0.1);
+    box-sizing: border-box;
+}
+
+.ds-course {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* desktop version */
+@media (min-width: 992px) {
+
+    /* Navbar */
+    /* .navbar-brand,
+    .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .nav-link {
+        text-transform: capitalize;
+        margin-right: 45px;
+        border-bottom: 2px;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid #F5C116;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    } */
+
+    /* Jumbotron */
+    .jumbotron {
+        margin-top: -76px;
+        height: 667px;
+    }
+
+    .display-4 {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        margin-top: 145px;
+        font-size: 31px;
+    }
+
+    .sub-display {
+        font-size: 16px;
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        margin-top: 30px;
+    }
+
+    .btn-join {
+        background-color: #F5C116;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+    
+    .btn-join:hover {
+        display: inline-block;
+        background-color: #cf9f00;
+        border-radius: 10px;
+    }
+    /* End of Jumbotron */
+
+    /* Women Area */
+    .img-cewek {
+        margin-top: 125px;
+        margin-left: 60px;
+    }
+
+    .dscrb-cwk {
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        width: 616px;
+        height: 210px;
+        padding-top: 25px;
+        margin: -400px 100px 0px 455px;
+        text-align: center;
+        font-size: 31px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 46px;
+    }
+
+    .btn-seek {
+        background-color: #F5C116;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        font-size: 24px;
+        margin-top: 20px;
+        margin-inline: 19px;
+    }
+    
+    .btn-seek:hover {
+        display: inline-block;
+        background-color: #cf9f00;
+        border-radius: 10px;
+    }    
+    /* End of Women Area */
+
+    /* Popular Course */
+    .section-title {
+        font-size: 39px;
+        line-height: 58px;
+        margin-top: 200px;
+    }
+
+    .pop-course {
+        border: 1px solid rgba(33, 33, 33, 0.1);
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: 75px;
+        height: 436px;
+        width: 320px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-inline: 38px;
+    }
+
+    .ds-course {
+        font-size: 16px;
+        line-height: 24px;
+        color: #212121;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    
+    .free a {
+        border: 1px solid #121212;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 15px;
+        width: 89px;
+        height: 24px;
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+    .free a:hover {
+        background-color: #cf9f00;
+        border: #cf9f00;
+        color: black;
+    }
+
+    .foto {
+        height: 231px;
+        padding-top: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 271px;
+        border-radius: 10px;
+    }
+
+    .free a {
+        border: 1px solid #121212;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 10px;
+        width: 89px;
+        height: 24px;
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+    .btn-view {
+        background-color: #F5C116;
+        height: 50px;
+        width: 283px;
+        border-radius: 10px;
+        font-size: 20px;
+        margin-top: 50px;
+        margin-left: 415px;
+    }
+    
+    .btn-view:hover {
+        display: inline-block;
+        background-color: #cf9f00;
+        border-radius: 10px;
+    }
+
+    /* About Gotjeh */
+    .section-title {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 46px;
+        margin-top: 150px;
+        color: #212121;
+    }
+
+    .smalltron {
+        background-color: #0F1134;
+        margin-top: 35px;
+        height: 290px;
+    }
+
+    .foto-testi {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin-top: 80px;
+    }
+    .name-age {
+        width: 318px;
+        height: 30px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        color: #F9F9F9;
+        margin-top: 94px;
+    }
+
+    .subdscrb {
+        width: 938px;
+        height: 48px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #F9F9F9;
+        margin-top: 28px;
+    }   
+    /* End of About Gotjeh */
+
+    /* What We Have */
+    .we-have {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 46px;
+        text-align: center;
+        color: #212121;
+        margin-top: 150px;
+    }
+
+    .angka {
+        margin-top: 40px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 49px;
+        line-height: 73px;
+        margin-top: -90px;
+    }
+
+    .btm-angka {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 12px;
+    }
+    /* End of What We Have */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .display-4 {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .sub-display {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        margin-top: 40px;
+    }
+
+    .btn-join {
+        background-color: #F5C116;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .display-4 {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .sub-display {
+        font-size: 20px;
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+        margin-top: 40px;
+    }
+
+    .btn-join {
+        background-color: #F5C116;
+        height: 50px;
+        width: 200px;
+        border-radius: 10px;
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+}
