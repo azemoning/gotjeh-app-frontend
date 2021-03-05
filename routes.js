@@ -1,33 +1,47 @@
-// const { default: axios } = require("axios");
+const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-// const baseUrl = "https://gotjeh-backend.herokuapp.com/";
+const baseUrl = "https://gotjeh-backend.herokuapp.com/";
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", { page: "landing page" });
 });
 
-router.get("/auth/signin", (req, res) => {
-  res.render("auth/signin");
+router.get("/login", (req, res) => {
+  res.render("auth/login");
 });
 
-router.get("/auth/signup", (req, res) => {
-  res.render("auth/signup");
+router.get("/register", (req, res) => {
+  res.render("auth/register");
 });
 
-router.get("/page/course", (req, res) => {
+router.post("/register", (req, res) => {
+  axios
+    .post(`${baseUrl}/register`, req.body)
+    .then((result) => {
+      res.redirect("/login");
+    })
+    .catch((err) => console.log(err));
+});
+
+router.get("/faq", (req, res) => {
+  res.render("page/faq");
+});
+
+router.get("/course", (req, res) => {
   res.render("page/course");
 });
-router.get("/page/detail-course", (req, res) => {
+
+router.get("/detail-course", (req, res) => {
   res.render("page/detail-course");
 });
 
-router.get("/page/job", (req, res) => {
+router.get("/job", (req, res) => {
   res.render("page/job");
 });
 
-router.get("/page/detail-job", (req, res) => {
+router.get("/detail-job", (req, res) => {
   res.render("page/detail-job");
 });
 

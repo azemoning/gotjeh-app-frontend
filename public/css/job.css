@@ -1,4 +1,4 @@
-body{
+body {
     background-color: #F9F9F9;
 }
 
@@ -73,8 +73,8 @@ input[type=text] {
     font-size: 20px;
     line-height: 30px;
     padding: 5px 30px;
-    float: left; 
-    margin:45px 20px 0px 20px;
+    float: left;
+    margin: 45px 20px 0px 20px;
     border: 1px solid #F9F9F9;
     box-sizing: border-box;
     border-radius: 10px;
@@ -130,16 +130,22 @@ input[type=text] {
     border-radius: 10px;
 }
 
-.free a {
-    border: 1px solid #121212;
-    box-sizing: border-box;
-    border-radius: 10px;
+/* ----------------------- */
+/* Empty Room */
+.sorry {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 46px;
     text-align: center;
-    margin-top: 15px;
-    margin-left: 10px;
-    width: 89px;
-    height: 24px;
-    display: block;
-    text-decoration: none;
-    color: black;
+    margin-top: 40px;
+}
+
+.box {
+    width: 380px;
+    height: 380px;
+    margin-left: 370px;
+    margin-top: 50px;
+    margin-bottom: -90px;
 }

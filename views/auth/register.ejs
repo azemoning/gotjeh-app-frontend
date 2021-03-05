@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
 
     <!-- font googleapis -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,29 +32,29 @@
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-12">
                         <a href="/"><img src="/img/btn-back.png" alt="" class="mb-4" width="40" height="40"></a>
-                        <h3 class="mb-4 text-capitalize">Sign Up</h3>
-                        <form action="" method="post">
+                        <h3 class="mb-4 text-capitalize">Daftar</h3>
+                        <form action="/login" method="post" id="form">
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="first-name">First Name</label>
-                                    <input type="text" class="form-control" placeholder="Type your first name"
+                                    <label for="first-name">Nama Depan</label>
+                                    <input type="text" class="form-control" placeholder="Ketikkan nama depan Anda "
                                         id="first-name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Type your last name"
+                                    <label for="last-name">Nama Belakang</label>
+                                    <input type="text" class="form-control" placeholder="Ketikkan nama belakang Anda "
                                         id="last-name">
                                 </div>
                             </div>
-                            <div class="form-group mb-3">
+                            <div class="form-group">
                                 <label for="Email">Email</label>
                                 <input type="email" class="form-control" placeholder="your-email@gmail.com" id="Email">
                             </div>
                             <div class="form-group">
-                                <label for="password1" class="d-block">Password</label>
+                                <label for="password1" class="d-block">Kata Sandi</label>
                                 <input id="password1" type="password" class="form-control pwstrength"
                                     data-indicator="pwindicator" name="password1" aria-describedby="passwordHelpInline"
-                                    placeholder="Type your password">
+                                    placeholder="Ketikkan kata sandi Anda ">
                                 <small id="passwordHelpInline" class="text-muted"> Must be 8-20 characters
                                     long.</small>
                                 <div id="pwindicator" class="pwindicator">
@@ -63,16 +63,16 @@
                                 </div>
                             </div>
                             <div class="form-group mb-4">
-                                <label for="password2" class="d-block">Confirm Password</label>
+                                <label for="password2" class="d-block">Masukkan Ulang Kata Sandi</label>
                                 <input id="password2" type="password" class="form-control" name="password2"
-                                    placeholder="Confirm type your password">
+                                    placeholder="ketikkan ulang kata sandi Anda ">
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-block btn-lg text-capitalize">Sign Up
+                                <button type="submit" class="btn btn-block btn-lg text-capitalize">Daftar
                                 </button>
                             </div>
-                            <span class="control mt-4 text-center">Already have account? <a href="/auth/signin"
-                                    class="forgot-pass">Sign In</a> here</span>
+                            <span class="control mt-4 text-center">Sudah memiliki akun? <a href="/login"
+                                    class="forgot-pass">Masuk</a> di sini</span>
                         </form>
                     </div>
                 </div>

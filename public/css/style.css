@@ -1,9 +1,13 @@
+body {
+    background-color: #f9f9f9;
+}
+
 /* Jumbotron General */
 .jumbotron {
     background-color: #0F1134;
-    background-size: cover;
-    background-image: url("/img/image-2.png");
-
+    background-size: 1280px 665px;
+    background-image: url('/img/image-2.png');
+    background-repeat: no-repeat;
 }
 
 .display-4 {
@@ -40,29 +44,6 @@
 /* desktop version */
 @media (min-width: 992px) {
 
-    /* Navbar */
-    /* .navbar-brand,
-    .nav-link {
-        color: white !important;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-    }
-
-    .nav-link {
-        text-transform: capitalize;
-        margin-right: 45px;
-        border-bottom: 2px;
-    }
-
-    .nav-link:hover::after {
-        content: '';
-        display: block;
-        border-bottom: 2px solid #F5C116;
-        width: 50%;
-        margin: auto;
-        padding-bottom: 5px;
-        margin-bottom: -8px;
-    } */
-
     /* Jumbotron */
     .jumbotron {
         margin-top: -76px;
@@ -73,22 +54,35 @@
         color: white !important;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
         margin-top: 145px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
         font-size: 31px;
+        line-height: 46px;
     }
 
     .sub-display {
-        font-size: 16px;
         color: white !important;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
         margin-top: 30px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .btn-join {
         background-color: #F5C116;
         height: 50px;
-        width: 200px;
+        width: 283px;
         border-radius: 10px;
-        font-size: 24px;
+        margin-top: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .btn-join:hover {
@@ -113,7 +107,7 @@
         width: 616px;
         height: 210px;
         padding-top: 25px;
-        margin: -400px 100px 0px 455px;
+        margin: -400px 50px 0px 400px;
         text-align: center;
         font-size: 31px;
         font-family: Poppins;
@@ -125,11 +119,10 @@
     .btn-seek {
         background-color: #F5C116;
         height: 50px;
-        width: 200px;
+        width: 217px;
         border-radius: 10px;
         font-size: 24px;
         margin-top: 20px;
-        margin-inline: 19px;
     }
 
     .btn-seek:hover {
@@ -154,7 +147,7 @@
         margin: 75px;
         height: 436px;
         width: 320px;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 100px;
         margin-inline: 38px;
     }
@@ -168,12 +161,12 @@
     }
 
     .free a {
+        margin-left: 10px;
         border: 1px solid #121212;
         box-sizing: border-box;
         border-radius: 10px;
         text-align: center;
         margin-top: 15px;
-        margin-left: 10px;
         width: 89px;
         height: 24px;
         display: block;
@@ -181,11 +174,11 @@
         color: black;
     }
 
-    .free a:hover {
+    /* .free a:hover {
         background-color: #cf9f00;
         border: #cf9f00;
         color: black;
-    }
+    } */
 
     .foto {
         height: 231px;
@@ -196,20 +189,54 @@
         border-radius: 10px;
     }
 
-    .btn-view {
+    .selengkapnya a {
+        border: 1px solid #121212;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 10px;
+        width: 120px;
+        height: 28px;
+        display: block;
+        text-decoration: none;
+        color: black;
+        margin-top: 65px;
+        margin-left: 75px;
+    }
+
+    .selengkapnya a:hover {
+        background-color: #cf9f00;
+        border: #cf9f00;
+        color: black;
+    }
+
+    /* Posting Job */
+    .posting-job {
+        margin-top: 250px;
+    }
+
+    .post {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    .btn-post {
         background-color: #F5C116;
         height: 50px;
         width: 283px;
         border-radius: 10px;
         font-size: 20px;
-        margin-top: 50px;
-        margin-left: 415px;
+        margin-top: 20px;
+        margin-left: 130px;
     }
 
-    .btn-view:hover {
-        display: inline-block;
-        background-color: #cf9f00;
-        border-radius: 10px;
+    .pict-post {
+        margin-top: -120px;
     }
 
     /* About Gotjeh */
@@ -263,28 +290,17 @@
     /* End of About Gotjeh */
 
     /* What We Have */
-    .we-have {
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 31px;
-        line-height: 46px;
-        text-align: center;
-        color: #212121;
-        margin-top: 150px;
-    }
 
     .angka {
-        margin-top: 40px;
+        margin-top: 120px;
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
         font-size: 49px;
         line-height: 73px;
-        margin-top: -90px;
     }
 
-    .btm-angka {
+    .dsc-angka {
         font-family: Poppins;
         font-style: normal;
         font-weight: normal;
@@ -312,7 +328,7 @@
     .btn-join {
         background-color: #F5C116;
         height: 50px;
-        width: 200px;
+        width: 280px;
         border-radius: 10px;
         margin-top: 40px;
         font-size: 20px;
@@ -337,7 +353,7 @@
     .btn-join {
         background-color: #F5C116;
         height: 50px;
-        width: 200px;
+        width: 280px;
         border-radius: 10px;
         margin-top: 40px;
         font-size: 20px;
