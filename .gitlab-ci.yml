@@ -23,7 +23,7 @@ mr_test:
   stage: test
   script:
     - npm install
-    - npm start
+    - npm start && exit 0
   only:
     - merge_requests
 
