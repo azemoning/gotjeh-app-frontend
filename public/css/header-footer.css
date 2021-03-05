@@ -30,12 +30,12 @@
         padding-bottom: 5px;
         margin-bottom: -8px;
     }
-    
+
     /* Footer */
     .footertron {
         height: 345px;
         background-color: #0F1134;
-        margin-top: 150px;
+        margin-top: 120px;
     }
 
     .lggotjeh {
@@ -44,10 +44,11 @@
         height: 50px;
     }
 
-    .alamat .almt{
+    .alamat .almt {
         height: 22px;
         width: 26px;
-        float:left; margin:0 9px 3px 0;
+        float: left;
+        margin: 0 9px 3px 0;
     }
 
     .alamat a {
@@ -77,7 +78,7 @@
         display: block;
         margin-top: 37px;
     }
-    
+
     .f-menu {
         color: #F9F9F9;
         margin-top: 42px;
@@ -144,12 +145,12 @@
     .ssmd {
         margin-top: 25px;
         float: left;
-        margin:0 33px 3px 0;
+        margin: 0 33px 3px 0;
         width: 25px;
         height: 25px;
     }
 
-    #footer{
+    #footer {
         color: #F9F9F9;
         text-align: center;
         font-size: 16px;
@@ -157,5 +158,6 @@
         background-color: #0F1134;
         height: 40px;
     }
+
     /* End of Footer */
 }

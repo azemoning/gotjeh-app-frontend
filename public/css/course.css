@@ -101,7 +101,7 @@ input[type=text] {
     margin-left: 15px;
 }
 
-.free a {
+.free p {
     border: 1px solid #121212;
     box-sizing: border-box;
     border-radius: 10px;
@@ -115,7 +115,7 @@ input[type=text] {
     color: black;
 }
 
-.free a:hover {
+.free p:hover {
     background-color: #cf9f00;
     border: #cf9f00;
     color: black;

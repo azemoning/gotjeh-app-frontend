@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- font googleapis -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/deskripsi-job.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+
+    <!-- Title -->
+    <title>Gotjeh: Where Jobs Find You</title>
+</head>
+
+<body>
+    <%- include("../partials/navbar.ejs") %>
+
+    <!-- Jumbotron + Foto + Title + Button -->
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 descript">
+                    <div class="row">
+                        <div class="col-10.5 desc">
+                            <div class="desk-course">
+                                <p class="title">Tukang Cabut Rumput Gajah - Waykambas</p>
+                            </div>
+                            <div class="gambar-desk">
+                                <img class="gmbr" src="/img/banner-job.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Jumbotron -->
+
+    <!-- Deskripsi Kelas -->
+    <section class="deskripsi-kelas">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 descript">
+                    <div class="row">
+                        <div class="col-10.5 desc">
+                            <h3>Job Description</h3>
+                            <p class="deskripsi">Kami membutuhkan seseorang yang pandai dalam mengelola sosial media
+                                perusahaan kami. Target yang kami harapkan adalah 10K followers secara organik maksimal
+                                dalam waktu selama 3 bulan. Kami menawarkan gaji sebesar 5 juta rupiah untuk pekerjaan
+                                ini</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-desk">
+                    <button class="btn btn-mulai">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Deskripsi Kelas -->
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
