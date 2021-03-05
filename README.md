@@ -5,7 +5,9 @@
 A website where the user can find the desired freelance job, if the user feels his skills are lacking, he can follow the course that we have provided by our website.
 
 ## Demo
-[View Demo](https://gotjeh-frontend.herokuapp.com/)
+
+[Production](https://gotjeh.herokuapp.com/)
+[Development](https://gotjeh-develop.herokuapp.com/)
 
 ## Quick start
 
