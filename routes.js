@@ -45,4 +45,6 @@ router.get("/detail-job", (req, res) => {
   res.render("page/detail-job");
 });
 
+
+
 module.exports = router;
