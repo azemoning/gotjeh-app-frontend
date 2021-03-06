@@ -1,0 +1,57 @@
+body {
+    background-color: #f9f9f9;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #0F1134;
+    background-size: cover;
+    height: 250px;
+    margin-top: -77px;
+}
+
+/* Title */
+.upgrade-skill {
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 46px;
+    color: white;
+    margin-top: 74px;
+    margin-bottom: 48px;
+}
+
+/* F.A.Q */
+.sub-faq {
+    margin-inline: 50px;
+}
+
+.title-sub {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 60px;
+}
+
+.ds-sub {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ask {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: -50px;
+}
