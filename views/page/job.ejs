@@ -29,46 +29,53 @@
 <body>
     <%- include("../partials/navbar.ejs") %>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron">
-        <div class="container">
-            <h3 class="get-job text-capitalize">Yuk, Cari Kerja Paruh Waktu di sini!</h3><br>
-            <p class="dscrb-title">Tunggu apa lagi? Yuk bekerja sekarang bersama Gotjeh!</p>
-        </div>
-        <div class="bar-srch">
-            <input type="text" name="search" placeholder="Search">
-        </div>
-        <div class="short">
-            <p class="shortby">Kategori:</p>
-            <p><a href="#" class="shorts">Semua</a></p>
-            <p><a href="#" class="shorts">Desain</a></p>
-            <p><a href="#" class="shorts">Digital Marketing</a></p>
-        </div>
-    </section>
-    <!-- End of Jumbotron -->
+        <!-- Jumbotron -->
+        <section class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="col-12">
+                    <h3 class="get-job text-capitalize">Dapatkan Pekerjaan Sekarang!</h3>
+                    <p class="dscrb-title">Tunggu apa lagi? Yuk bekerja sekarang bersama Gotjeh!</p>
 
-    <!-- job empty -->
-    <section class="empty-room">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col">
-                    <div class="row">
-                        <div class="col-lg">
-                            <p class="sorry">Sayang sekali, pekerjaan yang kamu cari<br>belum tersedia.</p>
+                    <div class="row justify-content-center">
+                        <div class="bar-srch">
+                            <input type="text" name="Search" placeholder="masukkan minimal 3 karakter">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg">
-                            <img src="/img/box-1.svg" class="box">
+
+                    <div class="row justify-content-center pd-shorts">
+                        <p class="shortby mr-3 my-auto">Kategori:</p>
+                        <button class="btn btn-outline-light shorts mr-3">Semua</button>
+                        <button class="btn btn-outline-light shorts mr-3">Desain</button>
+                        <button class="btn btn-outline-light shorts">Digital Marketing</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of Jumbotron -->
+
+        <!-- job empty -->
+        <section class="empty-room">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-lg">
+                                <p class="sorry">Sayang sekali, pekerjaan yang kamu cari<br>belum tersedia.</p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="container">
+                                <img src="/img/box-1.svg" class="box">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End of job empty -->
+        </section>
+        <!-- End of job empty -->
 
-    <%- include("../partials/footer.ejs") %>
+        <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>
