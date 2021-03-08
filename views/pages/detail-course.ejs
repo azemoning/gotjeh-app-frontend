@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- font googleapis -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/deskripsi-course.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+
+    <!-- Title -->
+    <title>Gotjeh: Where Jobs Find You</title>
+</head>
+
+<body>
+    <%- include("../partials/navbar.ejs") %>
+
+    <!-- Jumbotron + Foto + Title + Button -->
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-7 desc">
+                    <div class="row">
+                        <div class="desk-course justify-content-centers">
+                            <p class="title">UI Design For Mobile App - Beginner</p>
+                        </div>
+                        <div class="gambar-desk">
+                            <img class="gmbr" src="/img/desk-course.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Jumbotron -->
+
+    <!-- Deskripsi Kelas -->
+    <section class="deskripsi-kelas">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="btn-desk">
+                    <button class="btn btn-mulai">Apply Now</button>
+                </div>
+                <div class="col-10 descript">
+                    <div class="row">
+                        <div class="col-10.5 desc">
+                            <h3>Deskripsi Kelas</h3>
+                            <p class="deskripsi">Kelas ini dibangun dengan tujuan utama yaitu adalah membantu mereka
+                                untuk menguasai Soft Skills penting yang dibutuhkan ketika kita ingin meningkatkan
+                                jenjang karir kita lebih baik lagi. Kita akan memahami dan mempelajari Attitude kita
+                                agar perusahaan melihat kita lebih bernilai dan ingin bekerja sama dengan kita.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 isi-deskripsi">
+                    <div class="row">
+                        <div class="col-10.5 desc">
+                            <h3>Materi Kelas</h3>
+                            <h4 class="babi">Bab 1:</h4>
+                            <p class="deskripsi-bab1">UI/UX For Fundamental<br>Definition of UI<br>Definition of
+                                UX<br>The Different about UI & UX<br>UX Research</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 descript">
+                    <div class="row">
+                        <div class="col-10.5 bab2">
+                            <h4 class="babii">Bab 2:</h4>
+                            <p class="deskripsi-bab2">UI/UX For Fundamental<br>Definition of UI<br>Definition of
+                                UX<br>The Different about UI & UX<br>UX Research</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Deskripsi Kelas -->
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
