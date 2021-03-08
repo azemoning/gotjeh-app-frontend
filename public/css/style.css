@@ -5,7 +5,7 @@ body {
 /* Jumbotron General */
 .jumbotron {
     background-color: #0F1134;
-    background-size: 1280px 665px;
+    background-size: 100% 665px;
     background-image: url('/img/image-2.png');
     background-repeat: no-repeat;
 }
