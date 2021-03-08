@@ -33,27 +33,28 @@
                     <div class="col-md-12">
                         <a href="/"><img src="/img/btn-back.png" alt="" class="mb-4" width="40" height="40"></a>
                         <h3 class="mb-4 text-capitalize">Daftar</h3>
-                        <form action="/login" method="post" id="form">
+                        <form action="#" method="post" id="form">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="first-name">Nama Depan</label>
                                     <input type="text" class="form-control" placeholder="Ketikkan nama depan Anda "
-                                        id="first-name">
+                                        id="first-name" name="firstname">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="last-name">Nama Belakang</label>
                                     <input type="text" class="form-control" placeholder="Ketikkan nama belakang Anda "
-                                        id="last-name">
+                                        id="last-name" name="lastname">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="Email">Email</label>
-                                <input type="email" class="form-control" placeholder="your-email@gmail.com" id="Email">
+                                <input type="email" class="form-control" placeholder="your-email@gmail.com" id="Email"
+                                    name="email">
                             </div>
                             <div class="form-group">
-                                <label for="password1" class="d-block">Kata Sandi</label>
-                                <input id="password1" type="password" class="form-control pwstrength"
-                                    data-indicator="pwindicator" name="password1" aria-describedby="passwordHelpInline"
+                                <label for="password" class="d-block">Kata Sandi</label>
+                                <input id="password" type="password" class="form-control pwstrength"
+                                    data-indicator="pwindicator" name="password" aria-describedby="passwordHelpInline"
                                     placeholder="Ketikkan kata sandi Anda ">
                                 <small id="passwordHelpInline" class="text-muted"> Must be 8-20 characters
                                     long.</small>
@@ -64,7 +65,7 @@
                             </div>
                             <div class="form-group mb-4">
                                 <label for="password2" class="d-block">Masukkan Ulang Kata Sandi</label>
-                                <input id="password2" type="password" class="form-control" name="password2"
+                                <input id="password2" type="password" class="form-control"
                                     placeholder="ketikkan ulang kata sandi Anda ">
                             </div>
                             <div class="form-group">
