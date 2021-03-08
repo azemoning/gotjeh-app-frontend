@@ -5,7 +5,7 @@ body {
 /* Jumbotron General */
 .jumbotron {
     background-color: #0F1134;
-    background-size: 100% 665px;
+    background-size: 100% 920px;
     background-image: url('/img/image-2.png');
     background-repeat: no-repeat;
 }
@@ -47,16 +47,16 @@ body {
     /* Jumbotron */
     .jumbotron {
         margin-top: -76px;
-        height: 667px;
+        height: 920px;
     }
 
     .display-4 {
         color: white !important;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
-        margin-top: 145px;
+        margin-top: 235px;
         font-family: Poppins;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 31px;
         line-height: 46px;
     }

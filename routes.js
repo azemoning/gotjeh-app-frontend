@@ -7,6 +7,9 @@ const baseUrl = "https://gotjeh-backend-develop.herokuapp.com";
 router.get("/", (req, res) => {
   res.render("index", { page: "landing page" });
 });
+router.get("/index", (req, res) => {
+  res.render("index-user", { page: "landing page user" });
+});
 
 router.get("/login", (req, res) => {
   res.render("auth/login");
@@ -18,8 +21,8 @@ router.post("/login", async (req, res) => {
     return axios
       .post(`${baseUrl}/api/auth/login`, req.body)
       .then((result) => {
-        res.redirect("/");
-        res.send("hello world");
+        res.redirect("/index");
+        // res.send("hello world");
       })
       .catch((err) => console.log(err));
   } catch (error) {
@@ -46,23 +49,27 @@ router.post("/register", async (req, res) => {
 });
 
 router.get("/faq", (req, res) => {
-  res.render("page/faq");
+  res.render("pages/faq");
 });
 
 router.get("/course", (req, res) => {
-  res.render("page/course");
+  res.render("pages/course");
 });
 
 router.get("/detail-course", (req, res) => {
-  res.render("page/detail-course");
+  res.render("pages/detail-course");
 });
 
 router.get("/job", (req, res) => {
-  res.render("page/job");
+  res.render("pages/job");
 });
 
 router.get("/detail-job", (req, res) => {
-  res.render("page/detail-job");
+  res.render("pages/detail-job");
+});
+
+router.get("/post-job", (req, res) => {
+  res.render("pages/req-post-job");
 });
 
 module.exports = router;
