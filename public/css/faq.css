@@ -6,8 +6,11 @@ body {
 .jumbotron {
     background-color: #0F1134;
     background-size: cover;
-    height: 250px;
-    margin-top: -77px;
+    display: flexbox;
+    align-content: center;
+    align-items: center;
+    margin-top: -76px;
+    height: 320px;
 }
 
 /* Title */
@@ -16,10 +19,10 @@ body {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 31px;
+    font-size: 32px;
     line-height: 46px;
     color: white;
-    margin-top: 74px;
+    margin-top: 76px;
     margin-bottom: 48px;
 }
 

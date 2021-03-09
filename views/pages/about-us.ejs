@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- font googleapis -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+
+    <!-- Title -->
+    <title>Gotjeh: Where Jobs Find You</title>
+</head>
+
+<body>
+    <%- include("../partials/navbar.ejs") %>
+
+    <!-- Jumbotron -->
+    <section class="jumbotron jumbotron-fluid" style="background: url(/img/image-about.png);">
+        <div class="box-container">
+            <div class="col-12">
+                <h3 class="top text-capitalize">Tentang Kami</h3>
+                <p class="dscrb-title mt-5">Gotjeh terinspirasi dari banyaknya orang yang memiliki kesulitan untuk
+                    mencari pekerjaan <br> freelance. Terutama di saat pandemi, dimana perekonomian sedang krisis.</p>
+            </div>
+        </div>
+    </section>
+    <!-- End of Jumbotron -->
+
+    <!-- Foto -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <p class="tim-kami">Tim Kami</p>
+                <div class="col">
+                    <div class="row">
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-1.png" alt="Masagis">
+                            <p class="nama">Agis Tri Wahyuji</p>
+                            <p class="posisi">Tech Lead / Front End Developer</p>
+                        </div>
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-2.png" alt="Mahdi">
+                            <p class="nama">Muh. Mahdi Dewantoro</p>
+                            <p class="posisi">Front End Developer</p>
+                        </div>
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-3.png" alt="Desta">
+                            <p class="nama">A. Desta Pranata</p>
+                            <p class="posisi">UIUX Designer</p>
+                        </div>
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-4.png" alt="Sammy">
+                            <p class="nama">Sammy Sena</p>
+                            <p class="posisi">UIUX Designer</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-8.png" alt="zafran">
+                            <p class="nama">Zafran Ammar</p>
+                            <p class="posisi">Quality Assurance</p>
+                        </div>
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-7.png" alt="winda">
+                            <p class="nama">Winda Kurnia</p>
+                            <p class="posisi">Quality Assurance</p>
+                        </div>
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-5.png" alt="upi">
+                            <p class="nama">Ahmad Saufi M</p>
+                            <p class="posisi">Back End Developer</p>
+                        </div>
+                        <div class="col foto">
+                            <img class="pict" src="/img/team-6.png" alt="yogo">
+                            <p class="nama">Prayogo Dewantoro</p>
+                            <p class="posisi">Back End Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Foto -->
+
+    <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
