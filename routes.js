@@ -7,8 +7,13 @@ const baseUrl = "https://gotjeh-backend-develop.herokuapp.com";
 router.get("/", (req, res) => {
   res.render("index", { page: "landing page" });
 });
+
 router.get("/index", (req, res) => {
   res.render("index-user", { page: "landing page user" });
+});
+
+router.get("/forgot", (req, res) => {
+  res.render("auth/forgot-password");
 });
 
 router.get("/login", (req, res) => {
@@ -48,18 +53,6 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.get("/faq", (req, res) => {
-  res.render("pages/faq");
-});
-
-router.get("/course", (req, res) => {
-  res.render("pages/course");
-});
-
-router.get("/detail-course", (req, res) => {
-  res.render("pages/detail-course");
-});
-
 router.get("/job", (req, res) => {
   res.render("pages/job");
 });
@@ -70,6 +63,22 @@ router.get("/detail-job", (req, res) => {
 
 router.get("/post-job", (req, res) => {
   res.render("pages/req-post-job");
+});
+
+router.get("/course", (req, res) => {
+  res.render("pages/course");
+});
+
+router.get("/detail-course", (req, res) => {
+  res.render("pages/detail-course");
+});
+
+router.get("/faq", (req, res) => {
+  res.render("pages/faq");
+});
+
+router.get("/about", (req, res) => {
+  res.render("pages/about-us");
 });
 
 module.exports = router;

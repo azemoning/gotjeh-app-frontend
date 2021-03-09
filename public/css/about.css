@@ -1,0 +1,98 @@
+body {
+    background-color: #f9f9f9;
+}
+
+/*setting container to center */
+.box-container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* #hero-area {
+    background: url(/img/image-about.png) no-repeat;
+    background-size: cover;
+    height: 350px;
+    margin-top: -76px;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+#hero-area .overlay {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 0px;
+    left: 0px;
+    background: rgba(15, 17, 52, 0.5);
+} */
+
+/* Jumbotron */
+.jumbotron {
+    background: url(/img/image-about.png) no-repeat rgba(15, 17, 52, 0.5);
+    background-size: cover;
+    width: 100%;
+    height: 350px;
+    margin-top: -76px;
+    top: 0px;
+    left: 0px;
+}
+
+/* Title */
+.top {
+    margin-top: 76px;
+    text-align: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: white;
+}
+
+/* Describe of the page */
+.dscrb-title {
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+}
+
+/* Foto */
+.foto {
+    margin-top: 50px;
+}
+
+.tim-kami {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31px;
+    line-height: 46px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pict {
+    width: 250px;
+    height: 350px;
+    margin-inline: -10px;
+}
+
+.nama {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.posisi {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    margin-top: -10px;
+    text-align: center;
+}
