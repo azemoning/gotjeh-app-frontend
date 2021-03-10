@@ -57,7 +57,7 @@ router.get("/job", (req, res) => {
   res.render("pages/job");
 });
 
-router.get("/detail-job", (req, res) => {
+router.get("/job/detail", (req, res) => {
   res.render("pages/detail-job");
 });
 
@@ -69,8 +69,12 @@ router.get("/course", (req, res) => {
   res.render("pages/course");
 });
 
-router.get("/detail-course", (req, res) => {
+router.get("/course/detail", (req, res) => {
   res.render("pages/detail-course");
+});
+
+router.get("/course/tutorials", (req, res) => {
+  res.render("pages/tutorial-course");
 });
 
 router.get("/faq", (req, res) => {
@@ -79,6 +83,14 @@ router.get("/faq", (req, res) => {
 
 router.get("/about", (req, res) => {
   res.render("pages/about-us");
+});
+
+router.get("/profile", (req, res) => {
+  res.render("pages/profile");
+});
+
+router.get("/profile/edit", (req, res) => {
+  res.render("pages/edit-profile");
 });
 
 module.exports = router;
