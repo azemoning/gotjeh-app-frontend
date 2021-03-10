@@ -106,6 +106,7 @@ input[type=text] {
     border-radius: 10px;
     text-align: center;
     margin-top: 15px;
+    margin-left: 10px;
     width: 89px;
     height: 24px;
     display: block;
@@ -126,20 +127,6 @@ input[type=text] {
     padding-right: 10px;
     width: 271px;
     border-radius: 10px;
-}
-
-.free a {
-    border: 1px solid #121212;
-    box-sizing: border-box;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 15px;
-    margin-left: 10px;
-    width: 89px;
-    height: 24px;
-    display: block;
-    text-decoration: none;
-    color: black;
 }
 
 /* ----------------------- */
