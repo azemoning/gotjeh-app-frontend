@@ -19,6 +19,7 @@ Several quick start options are available:
 - Done
 
 ## Development Guide
+
 - Clone the repo: `https://gitlab.com/synrgy-mini-project-batch-2/team-e/frontend.git` to your local path
 - Make sure you have [npm](https://www.npmjs.com) installed to your machine
 - Run the `npm install` command to install dependencies
@@ -31,11 +32,8 @@ Several quick start options are available:
 - Each feature created must use a special branch. branch name for a feature has format `feature/{feature-name}`
 - Each feature has a flow : `feature/{feature-name}` MR → develop MR → production MR → master
 - Team Role:
-    * Maintainer: for students who as tech leads (can be appointed fasil or student voting)
-    * Developer: for other students"
-
-## Structur Folder
-
+  - Maintainer: for students who as tech leads (can be appointed fasil or student voting)
+  - Developer: for other students"
 
 ## Member Team
 
@@ -47,4 +45,3 @@ Several quick start options are available:
 6. Sammy Sena Chow
 7. Winda Kurnia
 8. Zhafran Ammar
-
