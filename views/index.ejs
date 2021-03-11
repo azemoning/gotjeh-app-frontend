@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Head -->
 <%- include("partials/head.ejs") %>
+<!-- End of Head -->
 
 <body>
+
+    <!-- Navbar -->
     <% if (session.token) { %>
     <%- include("partials/navbar-user.ejs") %>
     <% } else { %>
     <%- include("partials/navbar.ejs") %>
     <% } %>
+    <!-- End of Navbar -->
 
     <!-- Jumbotron -->
     <section class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Raih Impianmu untuk bekerja<br>secara fleksibel bersama Gotjeh!</h1>
             <p class="sub-display">Dapatkan pekerjaan yang kamu impikan dan tingkatkan<br>keahlianmu bersama kami!</p>
-            <a href="/register" class="btn btn-warning"
-                style="width: 260px; margin-top: 50px; text-align: center;"><strong> Gabung
-                    Sekarang!</strong> </a>
+            <a href="/register" class="btn btn-join">Gabung Sekarang!</a>
         </div>
     </section>
     <!-- End of Jumbotron -->
@@ -25,21 +28,17 @@
     <!-- Women Area -->
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 panel">
+            <div class="col-12 panel">
                 <div class="row">
                     <div class="col">
-                        <img class="img-cewek" src="/img/cewek.png" alt="" width="437 px" height="370 px">
+                        <img class="img-cewek" src="img/cewek.png" alt="" width="437" height="370">
                     </div>
                 </div>
             </div>
-            <div class="col-sm-7" style="margin-top: 120px;">
-                <div class="card shadow p-3 mb-5 bg-body rounded">
-                    <div class="card-body text-center">
-                        <h3 class="card-title">Butuh lowongan kerja freelance?<br>Tenang, Gotjeh siap
-                            membantu!
-                        </h3>
-                        <a href="/job" class="btn btn-warning mt-3">Cari Pekerjaan</a>
-                    </div>
+            <div class="row">
+                <div class="col dscrb-cwk">
+                    <h2>Butuh lowongan kerja freelance?<br>Tenang, Gotjeh siap membantu!</h2>
+                    <a href="/job" class="btn btn-seek"><b>Cari Pekerjaan</b></a>
                 </div>
             </div>
         </div>
@@ -51,54 +50,38 @@
         <div class="section-title text-center">
             <h2>Kursus Terpopuler</h2>
         </div>
-        <div class="row justify-content-center" style="margin-top: 60px;">
-            <div class="col-12">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <a href="#">
-                                <img src="/img/image-course-1.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Gratis</a>
-                                    <h5 class="card-title"><a href="#" class="text-dark">Full-stack Web
-                                            Developer</a></h5>
-                                </div>
-                            </a>
+        <div class="row justify-content-center">
+            <div class="col-12 popular-course">
+                <div class="row">
+                    <div class="col pop-course">
+                        <div class="photo">
+                            <a href="/course/detail"><img src="/img/image-course-1.png" class="card-img-top foto" alt="..."></a>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <a href="#">
-                                <img src="/img/image-course-2.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Premuim</a>
-                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
-                                        123.456</a>
-                                    <h5 class="card-title"><a href="#" class="text-dark">Android Engineering</a></h5>
-                                </div>
-                            </a>
+                        <div class="free">
+                            <p>Free</p>
                         </div>
+                        <h5 class="card-title"><a href="/course/detail" class="text-dark ds-course">Belajar Dasar User Experience dan User Interface</a></h5>
                     </div>
-                    <div class="col">
-                        <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <a href="#">
-                                <img src="/img/image-course-3.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Gratis</a>
-                                    <h5 class="card-title text-dark"><a href="#" class="text-dark">UI/UX
-                                            Design
-                                            & Research</a></h5>
-                                </div>
-                            </a>
+                    <div class="col pop-course">
+                        <div class="photo">
+                            <a href="/course/detail"><img src="/img/image-course-2.png" class="card-img-top foto" alt="..."></a>
                         </div>
+                        <div class="premium">
+                            <p>Premium</p>
+                        </div>
+                        <h5 class="card-title"><a href="/course/detail" class="text-dark ds-course">Belajar Teknik Memotret yang Baik dan Benar</a></h5>
                     </div>
-                </div>
-                <div class="text-center">
-                    <a href="/course" class="btn btn-warning" style="width: 180px;"><b>Lihat
-                            Semua</b></a>
+                    <div class="col pop-course">
+                        <a href="/course/detail"><img src="/img/image-course-3.png" class="card-img-top foto" alt="..."></a>
+                        <div class="premium">
+                            <p>Premium</p>
+                        </div>
+                        <h5 class="card-title text-dark"><a href="/course/detail" class="text-dark ds-course">Belajar Digital Marketing dan Strategi Media Sosial</a></h5>
+                    </div>
                 </div>
             </div>
         </div>
+        <center><a href="course.html" class="btn btn-view"><b>Lihat Semua</b></a></center>
     </div>
     <!-- End Popular Course -->
 
@@ -122,34 +105,74 @@
     <!-- End of Posting Job -->
 
     <!-- About Gotjeh -->
-    <div class="section-title text-center">
+	<div class="section-title text-center">
         <h2>Kata Mereka Tentang Gotjeh</h2>
     </div>
-    <section class="smalltron">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 about-gotjeh">
-                    <div class="row">
-                        <div class="col-lg">
-                            <img class="foto-testi" src="/img/circle-sam.png" alt="">
-                        </div>
-                        <div class="col">
-                            <h2 class="name-age">Dustin Tiffani, 26</h2>
-                            <p class="subdscrb">Setelah mengikuti course dan mengapply pekerjaan di Website Gotjeh, Saya
-                                akhirnya di hire menjadi freelance
-                                </br>CEO Tokopedia, Terimakasih Gotjeh.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+	<div class="container-fluid smalltron">
+		<div id="carousel-item" class="carousel slide mt-5 container z-depth-4 rounded" data-ride="carousel">
+			<div class="carousel-inner">
+
+                <!-- Slide 0 -->
+				<div class="carousel-item active">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-2">
+								<img src="../img/20200822123750-biodata-dustin-tiffani-lengkap-umur-agama.jpg" class="foto-testi">
+							</div>
+							<div class="col-10">
+								<h1 class="name-age">Dustin Tiffani, 26</h1>
+								<p class="subdscrb"><i>"Setelah mengikuti course dan meng-apply pekerjaan di Gotjeh, Saya akhirnya di hire menjadi Freelance CEO di Tokopedia dan Bukalapak. Terimakasih Gotjeh!"</i></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <!-- Slide 1 -->
+				<div class="carousel-item">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-2">
+								<img src="../img/image_750x_5efaa399edf24.jpg" class="foto-testi">
+							</div>
+							<div class="col-10">
+								<h1 class="name-age">Dustin Jhonss, 66</h1>
+								<p class="subdscrb"><i>"Awalnya Saya cuma coba-coba daftar di Gotjeh, soalnya kan website baru. Ehhh, kok saya jadi tambah pinter, dapet kerja pula di Microsoft cabang Warujayeng. Gotjeh mantab dah!"</i></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+                <!-- Slide 2 -->
+				<div class="carousel-item">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-2">
+								<img src="../img/EZaLPRNUYAEI9QB.jpg" class="foto-testi">
+							</div>
+							<div class="col-10">
+								<h1 class="name-age">Dustin Frutang, 69</h1>
+								<p class="subdscrb"><i>"Kalau main bola di gocek, tapi kalau mau sukses seperti saya, ya di Gotjeh!"</i></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+            
+            <!-- Button to Slide -->
+			<ol class="carousel-indicators m-auto">
+				<li data-target="#carousel-item" data-slide-to="0" class="active p-1"></li>
+				<li data-target="#carousel-item" data-slide-to="1" class="p-1"></li>
+				<li data-target="#carousel-item" data-slide-to="2" class="p-1"></li>
+			</ol>
+		</div>
+	</div>
     <!-- End of About Gotjeh -->
 
     <!-- What We Have -->
-    <!-- <div class="we-have text-center">
+    <div class="we-have text-center">
         <h2>Tentang Gotjeh</h2>
-    </div> -->
+    </div>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
@@ -170,10 +193,16 @@
             </div>
         </div>
     </div>
-
     <!-- End of What We Have -->
+
+    <!-- Footer -->
     <%- include("partials/footer.ejs") %>
+    <!-- End of Footer -->
+
+    <!-- JavaScript -->
     <script src="/js/script.js"></script>
+    <!-- End of JavaScript -->
+    
 </body>
 
 </html>
