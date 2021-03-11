@@ -5,15 +5,25 @@ const router = require("express").Router();
 const baseUrl = "https://gotjeh-backend-develop.herokuapp.com";
 
 router.get("/", (req, res) => {
-  res.render("index", { page: "landing page" });
-});
-
-router.get("/index", (req, res) => {
-  res.render("index-user", { page: "landing page user" });
+  res.render("index", { session: req.session });
 });
 
 router.get("/forgot", (req, res) => {
   res.render("auth/forgot-password");
+});
+
+router.post("/forgot", async (req, res) => {
+  // console.log(req.body);
+  try {
+    return axios
+      .post(`${baseUrl}/api/users/reset_password`, req.body)
+      .then((result) => {
+        res.redirect("/");
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/login", (req, res) => {
@@ -26,13 +36,19 @@ router.post("/login", async (req, res) => {
     return axios
       .post(`${baseUrl}/api/auth/login`, req.body)
       .then((result) => {
-        res.redirect("/index");
-        // res.send("hello world");
+        console.log(result);
+        req.session.token = result.data.token;
+        res.redirect("/");
       })
       .catch((err) => console.log(err));
   } catch (error) {
     console.log(error);
   }
+});
+
+router.get("/logout", (req, res) => {
+  delete req.session.token;
+  res.redirect("/");
 });
 
 router.get("/register", (req, res) => {
@@ -54,23 +70,98 @@ router.post("/register", async (req, res) => {
 });
 
 router.get("/job", (req, res) => {
-  res.render("pages/job");
+  try {
+    return axios
+      .get(`${baseUrl}/api/jobs`)
+      .then((result) => {
+        res.render("pages/job", { result: result.data, session: req.session });
+        // console.log(result.data);
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
-router.get("/job/detail", (req, res) => {
-  res.render("pages/detail-job");
+router.get("/job/detail/:id", (req, res) => {
+  const { id } = req.params;
+  try {
+    return axios
+      .get(`${baseUrl}/api/jobs/${id}`)
+      .then((result) => {
+        res.render("pages/detail-job", {
+          result: result.data,
+          session: req.session,
+        });
+        // console.log(result.data);
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/post-job", (req, res) => {
-  res.render("pages/req-post-job");
+  try {
+    return axios
+      .get(`${baseUrl}/api/categories`)
+      .then((result) => {
+        res.render("pages/req-post-job", { result: result.data });
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.post("/post-job", async (req, res) => {
+  // console.log(req.body);
+  try {
+    return axios
+      .post(`${baseUrl}/api/jobs`, req.body)
+      .then((result) => {
+        res.redirect("/");
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/course", (req, res) => {
+  try {
+    return axios
+      .get(`${baseUrl}/api/courses`)
+      .then((result) => {
+        res.render("pages/course", {
+          result: result.data,
+          session: req.session,
+        });
+        // console.log(result.data);
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
   res.render("pages/course");
 });
 
-router.get("/course/detail", (req, res) => {
-  res.render("pages/detail-course");
+router.get("/course/detail/:id", (req, res) => {
+  const { id } = req.params;
+  try {
+    return axios
+      .get(`${baseUrl}/api/courses/${id}`)
+      .then((result) => {
+        res.render("pages/detail-course", {
+          result: result.data,
+          session: req.session,
+        });
+        console.log(result.data);
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/course/tutorials", (req, res) => {
@@ -78,11 +169,11 @@ router.get("/course/tutorials", (req, res) => {
 });
 
 router.get("/faq", (req, res) => {
-  res.render("pages/faq");
+  res.render("pages/faq", { session: req.session });
 });
 
 router.get("/about", (req, res) => {
-  res.render("pages/about-us");
+  res.render("pages/about-us", { session: req.session });
 });
 
 router.get("/profile", (req, res) => {
@@ -91,6 +182,20 @@ router.get("/profile", (req, res) => {
 
 router.get("/profile/edit", (req, res) => {
   res.render("pages/edit-profile");
+});
+
+router.post("/subscriptions", async (req, res) => {
+  // console.log(req.body);
+  try {
+    return axios
+      .post(`${baseUrl}/api/subscriptions`, req.body)
+      .then((result) => {
+        res.redirect("/");
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 module.exports = router;

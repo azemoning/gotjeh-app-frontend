@@ -30,7 +30,11 @@
 </head>
 
 <body>
+    <% if (session.token) { %>
+    <%- include("../partials/navbar-user.ejs") %>
+    <% } else { %>
     <%- include("../partials/navbar.ejs") %>
+    <% } %>
 
     <!-- Jumbotron -->
     <section class="jumbotron jumbotron-fluid" style="background: url(/img/image-about.png);">
