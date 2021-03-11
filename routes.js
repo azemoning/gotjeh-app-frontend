@@ -2,7 +2,8 @@ const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-const baseUrl = "https://gotjeh-backend-develop.herokuapp.com";
+// const baseUrl = "https://gotjeh-backend-develop.herokuapp.com";
+const baseUrl = "http://localhost:3000";
 
 router.get("/", (req, res) => {
   res.render("index", { session: req.session });
@@ -69,13 +70,40 @@ router.post("/register", async (req, res) => {
   }
 });
 
-router.get("/job", (req, res) => {
+router.get("/job", async (req, res) => {
+  if (req.query.search) {
+    try {
+      const categories = await axios.get(`${baseUrl}/api/categories`)
+      return axios
+        .get(`${baseUrl}/api/jobs/search?search=${req.query.search}`)
+        .then((result) => {
+          res.render("pages/job", { result: result.data, session: req.session, categories: categories.data });
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  if (req.query.category) {
+    try {
+      const categories = await axios.get(`${baseUrl}/api/categories`)
+      return axios
+        .get(`${baseUrl}/api/jobs/filter?category=${req.query.category}`)
+        .then((result) => {
+          console.log(result.data);
+          res.render("pages/job", { result: result.data, session: req.session, categories: categories.data });
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
+  }
   try {
+    const categories = await axios.get(`${baseUrl}/api/categories`)
     return axios
-      .get(`${baseUrl}/api/jobs`)
+      .get(`${baseUrl}/api/jobs/approved`)
       .then((result) => {
-        res.render("pages/job", { result: result.data, session: req.session });
-        // console.log(result.data);
+        res.render("pages/job", { result: result.data, session: req.session, categories: categories.data });
       })
       .catch((err) => console.log(err));
   } catch (error) {
