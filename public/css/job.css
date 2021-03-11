@@ -123,6 +123,7 @@ input[type=text] {
     background: #F5C116;
     border-radius: 10px;
     margin-left: 40px;
+    margin-top: -40px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
@@ -149,6 +150,7 @@ input[type=text] {
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
+    margin-top: 5px;
     margin-left: 15px;
 }
 
@@ -214,8 +216,8 @@ input[type=text] {
     font-size: 12px;
     line-height: 20px;
     padding-top: 3px;
-    margin-top: -5px;
-    margin-left: 15px;
+    margin-top: 20px;
+    margin-left: -250px;
 }
 
 /* ----------------------- */

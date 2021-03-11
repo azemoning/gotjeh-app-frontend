@@ -53,6 +53,16 @@ p .txt {
     margin-top: 50px;
 }
 
+.txt:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #F5C116;
+    width: 30%;
+    margin: auto;
+    /* padding-bottom: 5px;
+    margin-bottom: -8px; */
+}
+
 /* Copyright */
 #footer {
     color: #F9F9F9;
@@ -143,6 +153,7 @@ input[type=text] {
     box-sizing: border-box;
     border-radius: 10px;
     text-align: center;
+    line-height: 17px;
     margin-top: 15px;
     margin-left: 10px;
     font-size: 13px;
