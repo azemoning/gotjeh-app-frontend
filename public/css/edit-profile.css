@@ -40,6 +40,16 @@ p .txt {
     margin-top: 50px;
 }
 
+.txt:hover::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #F5C116;
+    width: 30%;
+    margin: auto;
+    /* padding-bottom: 5px;
+    margin-bottom: -8px; */
+}
+
 /* Edit Profile */
 .edit-foto {
     margin-top: 120px;
