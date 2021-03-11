@@ -4,7 +4,11 @@
 <%- include("partials/head.ejs") %>
 
 <body>
+    <% if (session.token) { %>
+    <%- include("partials/navbar-user.ejs") %>
+    <% } else { %>
     <%- include("partials/navbar.ejs") %>
+    <% } %>
 
     <!-- Jumbotron -->
     <section class="jumbotron jumbotron-fluid">
@@ -52,36 +56,40 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <img src="/img/image-course-1.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#"
-                                    class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Gratis</a>
-                                <h5 class="card-title"><a href="/course/detail" class="text-dark">Full-stack Web
-                                        Developer</a></h5>
-                            </div>
+                            <a href="#">
+                                <img src="/img/image-course-1.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Gratis</a>
+                                    <h5 class="card-title"><a href="#" class="text-dark">Full-stack Web
+                                            Developer</a></h5>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <img src="/img/image-course-2.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#"
-                                    class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Premuim</a>
-                                <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
-                                    123.456</a>
-                                <h5 class="card-title"><a href="#" class="text-dark">Android Engineering</a></h5>
-                            </div>
+                            <a href="#">
+                                <img src="/img/image-course-2.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Premuim</a>
+                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
+                                        123.456</a>
+                                    <h5 class="card-title"><a href="#" class="text-dark">Android Engineering</a></h5>
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card shadow p-3 mb-5 bg-body rounded">
-                            <img src="/img/image-course-3.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <a href="#"
-                                    class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Gratis</a>
-                                <h5 class="card-title text-dark"><a href="/course/detail" class="text-dark">UI/UX Design
-                                        & Research</a></h5>
-                            </div>
+                            <a href="#">
+                                <img src="/img/image-course-3.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <a class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Gratis</a>
+                                    <h5 class="card-title text-dark"><a href="#" class="text-dark">UI/UX
+                                            Design
+                                            & Research</a></h5>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -165,6 +173,7 @@
 
     <!-- End of What We Have -->
     <%- include("partials/footer.ejs") %>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

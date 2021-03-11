@@ -1,9 +1,16 @@
 const express = require("express");
 const app = express();
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
+
 const port = process.env.PORT || 8000;
 
 const routes = require("./routes");
 
+app.use(cookieParser());
+app.use(
+  session({ secret: "sessionSecret", resave: true, saveUninitialized: true })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

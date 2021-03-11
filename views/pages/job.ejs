@@ -31,7 +31,11 @@
 </head>
 
 <body>
+    <% if (session.token) { %>
+    <%- include("../partials/navbar-user.ejs") %>
+    <% } else { %>
     <%- include("../partials/navbar.ejs") %>
+    <% } %>
 
     <!-- Jumbotron -->
     <section class="jumbotron jumbotron-fluid">
@@ -57,6 +61,7 @@
     </section>
     <!-- End of Jumbotron -->
 
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="card col-12">
@@ -72,32 +77,32 @@
 
     <!-- List Job -->
     <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="card mb-3 shadow bg-body rounded" style="max-width: 100%; border-radius: 10px;">
+        <% for( let index = 0; index < result.length; index++ ) { %>
+        <div class="row">
+            <div class="card mb-3 shadow bg-body rounded" style="border-radius: 20px;">
                 <div class="row g-0">
-                    <div class="col-md-3">
-                        <img src="/img/image-job-1.png" alt="..." style="height: 260px; width: 280px;">
+                    <div class="col-12 col-md-3">
+                        <img src="/img/<%= result[index].thumbnail %>" alt="thumnail-job"
+                            style="height: 260px; width: 280px; border-radius: 10px;">
                     </div>
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">Membutuhkan Freelancer untuk mengelola akun sosial media</h5>
-                            <p class="card-text">Kami membutuhkan seseorang yang pandai dalam mengelola sosial media
-                                perusahaan kami.
-                                Target yang kami harappkan adalah 10K followers secara organik maksimal dalam waktu
-                                selama 3
-                                bulan. Kami menawarkan gaji sebesar 5 Juta Rupiah...</p>
-                            <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
-                                5.000.000</a>
+                    <div class="col-12 col-md-9">
+                        <div class="card-body" style="max-width: 100%;">
+                            <h5 class="card-title"><%= result[index].job_name %></h5>
+                            <p class="card-text"><%= result[index].content %></p>
                             <a href="#"
-                                class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Desain</a><br>
-                            <a href="/job/detail" class="btn btn-warning" style="width: 120px;">Detail</a>
+                                class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded"><%= result[index].fee %></a>
+                            <a href="#"
+                                class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded"><%= result[index].category_id %></a><br>
+                            <a href="/job/detail/<%= result[index].id %>" class="btn btn-warning"
+                                style="width: 120px;">Detail</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <% } %>
     </div>
-    <div class="container mt-3">
+    <!-- <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="card mb-3 shadow bg-body rounded" style="max-width: 100%; border-radius: 10px;">
                 <div class="row g-0">
@@ -106,10 +111,13 @@
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
-                            <h5 class="card-title">Membutuhkan Freelancer untuk mengelola akun sosial media</h5>
-                            <p class="card-text">Saya membutuhkan seseorang yang bisa membantu saya dalam membuat
+                            <h5 class="card-title">Membutuhkan Freelancer untuk mengelola akun sosial media
+                            </h5>
+                            <p class="card-text">Saya membutuhkan seseorang yang bisa membantu saya dalam
+                                membuat
                                 tampilan website dan
-                                aplikasi mobile. Website yang akan dibuat merupakan website dan aplikasi mobile
+                                aplikasi mobile. Website yang akan dibuat merupakan website dan aplikasi
+                                mobile
                                 e-commerce yang
                                 menjual mainan anak - anak, konsep desain yang ingin kami tonjolkan...</p>
                             <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
@@ -132,10 +140,13 @@
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
-                            <h5 class="card-title">Membutuhkan Freelancer untuk membuat tampilan web dan aplikasi</h5>
-                            <p class="card-text">Saya membutuhkan seseorang yang bisa membantu saya dalam membuat
+                            <h5 class="card-title">Membutuhkan Freelancer untuk membuat tampilan web dan
+                                aplikasi</h5>
+                            <p class="card-text">Saya membutuhkan seseorang yang bisa membantu saya dalam
+                                membuat
                                 tampilan website dan
-                                aplikasi mobile. Website yang akan dibuat merupakan website dan aplikasi mobile
+                                aplikasi mobile. Website yang akan dibuat merupakan website dan aplikasi
+                                mobile
                                 e-commerce yang
                                 menjual mainan anak - anak, konsep desain yang ingin kami tonjolkan...</p>
                             <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
@@ -158,12 +169,16 @@
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
-                            <h5 class="card-title">Membutuhkan Tutor Freelance untuk kursus bahasa inggris</h5>
-                            <p class="card-text">Saya memiliki seorang anak berusia 5 tahun, saya ingin mengajarkan
+                            <h5 class="card-title">Membutuhkan Tutor Freelance untuk kursus bahasa inggris
+                            </h5>
+                            <p class="card-text">Saya memiliki seorang anak berusia 5 tahun, saya ingin
+                                mengajarkan
                                 bahasa inggris kepada
-                                anak saya, namun sayangnya saya tidak bisa berbahasa inggris. Jadi saya harap saya bisa
+                                anak saya, namun sayangnya saya tidak bisa berbahasa inggris. Jadi saya
+                                harap saya bisa
                                 menemukan
-                                tutor bahasa inggris freelance. Gaji yang saya tawarkan adalah sebesar 4 juta...</p>
+                                tutor bahasa inggris freelance. Gaji yang saya tawarkan adalah sebesar 4
+                                juta...</p>
                             <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">Rp
                                 3.000.000</a>
                             <a href="#"
@@ -174,7 +189,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- List Job -->
 
     <!-- job empty -->

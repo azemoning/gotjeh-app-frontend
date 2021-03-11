@@ -31,7 +31,11 @@
 </head>
 
 <body>
+    <% if (session.token) { %>
+    <%- include("../partials/navbar-user.ejs") %>
+    <% } else { %>
     <%- include("../partials/navbar.ejs") %>
+    <% } %>
 
     <!-- Jumbotron + Foto + Title + Button -->
     <section class="jumbotron">
@@ -40,10 +44,10 @@
                 <div class="col-7 desc">
                     <div class="row">
                         <div class="desk-course justify-content-centers">
-                            <p class="title">Kelas UI/UX Design & Research</p>
+                            <p class="title"><%= result.title %></p>
                         </div>
                         <div class="gambar-desk">
-                            <img class="gmbr" src="/img/desk-course.png">
+                            <img class="gmbr" src="/img/<%= result.thumbnail %>">
                         </div>
                     </div>
                 </div>
@@ -63,10 +67,7 @@
                     <div class="row">
                         <div class="col-10.5 desc">
                             <h3>Deskripsi Kelas</h3>
-                            <p class="deskripsi">Kelas paling tepat untuk kamu yang kreatif, banyak ide, dan ingin
-                                mendalami tentang research. Kurikulum dirancang oleh profesional dari perusahaan
-                                unicorn. Kamu akan dibantu oleh fasilitator selama proses pembelajaran dan dibantu
-                                mendapatkan pekerjaan idaman setelah lulus.</p>
+                            <p class="deskripsi"><%= result.description %></p>
                         </div>
                     </div>
                 </div>
@@ -74,18 +75,12 @@
                     <div class="row">
                         <div class="col-10.5 desc">
                             <h3>Materi Kelas</h3>
-                            <h4 class="babi">Bab 1:</h4>
-                            <p class="deskripsi-bab1">UI/UX For Fundamental<br>Definition of UI<br>Definition of
-                                UX<br>The Different about UI & UX<br>UX Research</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 descript">
-                    <div class="row">
-                        <div class="col-10.5 bab2">
-                            <h4 class="babii">Bab 2:</h4>
-                            <p class="deskripsi-bab2">UI/UX For Fundamental<br>Definition of UI<br>Definition of
-                                UX<br>The Different about UI & UX<br>UX Research</p>
+                            <% for( let a = 0; a < result.course_sections.length; a++ ) { %>
+                            <h4 class="babi"><%= result.course_sections[a].name %></h4>
+                            <% for( let b = 0; b < result.course_sections[a].course_contents.length; b++ ) { %>
+                            <p class="deskripsi-bab1"><%= result.course_sections[a].course_contents[b].name %></p>
+                            <% } %>
+                            <% } %>
                         </div>
                     </div>
                 </div>
