@@ -2,8 +2,7 @@ const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-// const baseUrl = "https://gotjeh-backend-develop.herokuapp.com";
-const baseUrl = "http://localhost:3000";
+const baseUrl = process.env.API_URL;
 
 router.get("/", (req, res) => {
   res.render("index", { session: req.session });
