@@ -113,8 +113,8 @@ input[type=text] {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 30px;
     float: left;
 }
 
@@ -128,11 +128,11 @@ input[type=text] {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    margin-top: -3px;
 }
 
 /* Course Category */
 .job-list {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     padding-bottom: 20px;
     margin-top: 50px;
     font-family: Poppins;
