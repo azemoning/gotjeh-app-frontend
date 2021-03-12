@@ -1,7 +1,7 @@
 body {
     background-color: #f9f9f9;
     font-family: Poppins;
-    
+
 }
 
 /* Jumbotron General */
@@ -92,6 +92,7 @@ body {
         background-color: #f5c116;
         border-radius: 10px;
     }
+
     /* End of Jumbotron */
 
     /* Women Area */
@@ -125,12 +126,13 @@ body {
         line-height: 25px;
         margin-top: 20px;
     }
-    
+
     .btn-seek:hover {
         display: inline-block;
         background-color: #cf9f00;
         border-radius: 10px;
-    }    
+    }
+
     /* End of Women Area */
 
     /* Popular Course */
@@ -149,15 +151,16 @@ body {
         margin-top: 50px;
         margin-bottom: 100px;
         margin-inline: 38px;
-        position:relative;
-    }    
-    
+        position: relative;
+    }
+
     .foto {
         height: 231px;
         width: 302px;
     }
 
-    .free, .premium {
+    .free,
+    .premium {
         margin-left: 10px;
         border: 1px solid #121212;
         box-sizing: border-box;
@@ -169,7 +172,7 @@ body {
         height: 24px;
         display: block;
         color: black;
-    }    
+    }
 
     h5 {
         font-size: 16px;
@@ -179,8 +182,8 @@ body {
         margin-right: 15px;
         margin-left: 15px;
         text-align: justify;
-    }        
-    
+    }
+
     .btn-view {
         background-color: #F5C116;
         height: 44px;
@@ -191,7 +194,7 @@ body {
         margin-top: -20px;
         padding-top: 10px;
     }
-    
+
     .btn-view:hover {
         display: inline-block;
         background-color: #cf9f00;
@@ -279,6 +282,7 @@ body {
         border-radius: 50%;
         margin-bottom: -50px;
     }
+
     /* End of About Gotjeh */
 
     /* What We Have */

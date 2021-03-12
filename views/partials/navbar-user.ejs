@@ -11,7 +11,16 @@
         <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="/">Beranda</a>
-                <a class="nav-item nav-link" href="/job">Pekerjaan</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pekerjaan
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/post-job">Posting Pekerjaan</a></li>
+                        <li><a class="dropdown-item" href="/job">Cari Pekerjaan</a></li>
+                    </ul>
+                </li>
                 <a class="nav-item nav-link" href="/course">Kursus</a>
                 <a class="nav-item nav-link" href="/faq">F.A.Q</a>
                 <a class="nav-item nav-link" href="/about">Tentang Kami</a>
@@ -24,11 +33,7 @@
                         style="height: 15px; width: 15px; margin-top: 6px;">
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div class="list-dropdown">
-                            <a class="dropdown-item" href="/profile/edit"><i class="fas fa-user-alt"></i> Profil</a>
-                        </div>
-                        <div class="list-dropdown">
-                            <a class="dropdown-item" href="/profile"><i class="fas fa-chalkboard-teacher"></i>
-                                Kelas Kursus Saya</a>
+                            <a class="dropdown-item" href="/profile"><i class="fas fa-user-alt"></i> Profil</a>
                         </div>
                         <div class="list-dropdown">
                             <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Keluar</a>
