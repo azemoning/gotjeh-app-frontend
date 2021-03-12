@@ -34,31 +34,36 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-12">
-                        <a href="/"><img src="/img/btn-back.png" alt="" class="mb-4" width="40" height="40"></a>
+                        <a href="/"><img src="/img/btn-back.png" alt="" class="mt-3 mb-4" width="40" height="40"></a>
                         <h3 class="mb-5 text-capitalize">Posting Pekerjaan Freelance</h3>
                         <form action="#" method="post">
-                            <div class="form-group first">
-                                <label for="name-job">Nama Pekerjaan</label>
-                                <input type="text" class="form-control" placeholder="Tuliskan nama pekerjaan"
-                                    id="name-job" name="requester_name">
-                            </div>
                             <div class="form-group second mt-3">
                                 <label for="Email">Email</label>
                                 <input type="email" class="form-control" placeholder="your-email@gmail.com" id="email"
-                                    name="requester_email">
+                                    name="requester_email" required>
+                            </div>
+                            <div class="form-group first">
+                                <label for="name-job">Nama Pekerjaan</label>
+                                <input type="text" class="form-control" placeholder="Tuliskan nama pekerjaan"
+                                    id="name-job" name="requester_name" required>
+                            </div>
+                            <div class="form-floating form-group">
+                                <label for="content">Deskripsi Pekerjaan</label>
+                                <textarea class="form-control" placeholder="Masukkan deskripsi pekerjaan anda"
+                                    id="content" name="content" style="height: 100px" required></textarea>
                             </div>
                             <div class="row mt-3">
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="gaji">Gaji</label>
                                         <input type="text" class="form-control" placeholder="Tulis gaji yang ditawarkan"
-                                            id="gaji" name="fee">
+                                            id="gaji" name="fee" required>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="kategori">Kategori</label>
-                                        <select name="category_id" id="category_id" class="form-control">
+                                        <select name="category_id" id="category_id" class="form-control" required>
                                             <% for( let index = 0; index < result.length; index++ ) { %>
                                             <option value=<%= result[index].id %>><%= result[index].name %> </option>
                                             <% } %>

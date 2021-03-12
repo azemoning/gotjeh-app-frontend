@@ -1,7 +1,3 @@
-/* body {
-    background-color: #f9f9f9;
-}
-
 /* Jumbotron */
 .jumbotron {
     background-color: #0F1134;
@@ -15,11 +11,12 @@
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 31px;
+    font-size: 32px;
     line-height: 46px;
     text-align: center;
     color: #FFFFFF;
     margin-top: 75px;
+    margin-right: 40px;
 }
 
 /* Gambar Deskripsi Job */
@@ -52,6 +49,7 @@
     margin-bottom: 10px;
     margin-left: 110px;
 }
+
 .deskripsi-bab2 {
     margin-bottom: -65px;
     margin-left: 125px;
@@ -81,6 +79,7 @@ h3 {
     width: 794px;
 
 }
+
 /* Tombol */
 .btn-mulai {
     color: black;
@@ -89,10 +88,12 @@ h3 {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 37px;
     width: 638px;
-    height: 68px;
-    margin-top: 299px;
+    height: 48px;
+    margin-top: 300px;
     margin-bottom: 100px;
+    text-align: center;
+    text-justify: auto;
 }
