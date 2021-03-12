@@ -22,7 +22,9 @@
                                         Gotjeh!</h1>
                                     <p class="sub-display">Dapatkan pekerjaan yang kamu impikan dan
                                         tingkatkan<br>keahlianmu bersama kami!</p>
-                                    <a href="/register" class="btn btn-join">Gabung Sekarang!</a>
+                                    <% if (!session.token) { %>
+                                        <a href="/register" class="btn btn-join">Gabung Sekarang!</a>
+                                        <% } %>
                                 </div>
                             </section>
                             <!-- End of Jumbotron -->

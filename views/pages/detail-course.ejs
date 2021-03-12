@@ -32,64 +32,67 @@
 
 <body>
     <% if (session.token) { %>
-    <%- include("../partials/navbar-user.ejs") %>
-    <% } else { %>
-    <%- include("../partials/navbar.ejs") %>
-    <% } %>
+        <%- include("../partials/navbar-user.ejs") %>
+            <% } else { %>
+                <%- include("../partials/navbar.ejs") %>
+                    <% } %>
 
-    <!-- Jumbotron + Foto + Title + Button -->
-    <section class="jumbotron">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-7 desc">
-                    <div class="row">
-                        <div class="desk-course justify-content-centers">
-                            <p class="title"><%= result.title %></p>
-                        </div>
-                        <div class="gambar-desk">
-                            <img class="gmbr" src="/img/<%= result.thumbnail %>">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Jumbotron -->
+                        <!-- Jumbotron + Foto + Title + Button -->
+                        <section class="jumbotron">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-7 desc">
+                                        <div class="row">
+                                            <div class="desk-course justify-content-centers">
+                                                <p class="title">
+                                                    <%= result.title %>
+                                                </p>
+                                            </div>
+                                            <div class="gambar-desk">
+                                                <img class="gmbr" src="/img/<%= result.thumbnail %>">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of Jumbotron -->
 
-    <!-- Deskripsi Kelas -->
-    <section class="deskripsi-kelas">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="btn-desk">
-                    <a href="/course/tutorials" class="btn btn-mulai">Mulai Kelas</a>
-                </div>
-                <div class="col-10 descript">
-                    <div class="row">
-                        <div class="col-10.5 desc">
-                            <h3>Deskripsi Kelas</h3>
-                            <p class="deskripsi"><%= result.description %></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 isi-deskripsi">
-                    <div class="row">
-                        <div class="col-10.5 desc">
-                            <h3>Materi Kelas</h3>
-                            <% for( let a = 0; a < result.course_sections.length; a++ ) { %>
-                            <h4 class="babi"><%= result.course_sections[a].name %></h4>
-                            <% for( let b = 0; b < result.course_sections[a].course_contents.length; b++ ) { %>
-                            <p class="deskripsi-bab1"><%= result.course_sections[a].course_contents[b].name %></p>
-                            <% } %>
-                            <% } %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Deskripsi Kelas -->
+                        <!-- Deskripsi Kelas -->
+                        <section class="deskripsi-kelas">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="btn-desk">
+                                        <a href="/course/tutorials" class="btn btn-mulai">Mulai Kelas</a>
+                                    </div>
+                                    <div class="col-10 descript">
+                                        <div class="row">
+                                            <div class="col-10.5 desc">
+                                                <h3>Deskripsi Kelas</h3>
+                                                <p class="deskripsi">
+                                                    <%= result.description %>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-10 isi-deskripsi">
+                                        <div class="row">
+                                            <div class="col-10.5 desc">
+                                                <h3>Materi Kelas</h3>
+                                                <% for( let a=0; a < result.course_sections.length; a++ ) { %>
+                                                    <p>
+                                                        <%= (a+1) + '. ' + result.course_sections[a].name %>
+                                                    </p>
+                                                    <% } %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of Deskripsi Kelas -->
 
-    <%- include("../partials/footer.ejs") %>
+                        <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>

@@ -32,61 +32,78 @@
 
 <body>
     <% if (session.token) { %>
-    <%- include("../partials/navbar-user.ejs") %>
-    <% } else { %>
-    <%- include("../partials/navbar.ejs") %>
-    <% } %>
+        <%- include("../partials/navbar-user.ejs") %>
+            <% } else { %>
+                <%- include("../partials/navbar.ejs") %>
+                    <% } %>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron jumbotron-fluid">
-        <div class="box-container">
-            <div class="col-12">
-                <h3 class="get-job text-capitalize">Yuk, Tingkatkan Keterampilanmu Sekarang!</h3>
-                <p class="dscrb-title">Daripada nganggur di rumah, mending belajar hal-hal baru di sini deh! <br>
-                    Semuanya gratis dan bisa diakses kapan aja</p>
+                        <!-- Jumbotron -->
+                        <section class="jumbotron jumbotron-fluid">
+                            <div class="box-container">
+                                <div class="col-12">
+                                    <h3 class="get-job text-capitalize">Yuk, Tingkatkan Keterampilanmu Sekarang!</h3>
+                                    <p class="dscrb-title">Daripada nganggur di rumah, mending belajar hal-hal baru di
+                                        sini deh! <br>
+                                        Semuanya gratis dan bisa diakses kapan aja</p>
 
-                <div class="row justify-content-center">
-                    <div class="bar-srch">
-                        <input type="text" name="Search" placeholder="masukkan minimal 3 karakter">
-                    </div>
-                </div>
+                                    <form action="/course" method="GET">
+                                        <div class="row justify-content-center">
+                                            <div class="bar-srch">
+                                                <input type="text" name="search"
+                                                    placeholder="masukkan minimal 3 karakter">
+                                                <input type="submit" value="" style="display: none;">
+                                            </div>
+                                        </div>
+                                    </form>
 
-                <div class="row justify-content-center pd-shorts">
-                    <p class="shortby mr-3 my-auto">Kategori:</p>
-                    <button class="btn btn-outline-light shorts mr-3">Semua</button>
-                    <button class="btn btn-outline-light shorts mr-3">Desain</button>
-                    <button class="btn btn-outline-light shorts">Digital Marketing</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Jumbotron -->
+                                    <div class="row justify-content-center pd-shorts">
+                                        <p class="shortby mr-3 my-auto">Kategori:</p>
+                                        <button class="btn btn-outline-light shorts mr-3"
+                                            onclick="location.href='/course'">Semua</button>
+                                        <% for( let index=0; index < categories.length; index++ ) { %>
+                                            <button class="btn btn-outline-light shorts mr-3"
+                                                onclick="location.href='/course?category=<%= categories[index].id %>'">
+                                                <%= categories[index].name %>
+                                            </button>
+                                            <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of Jumbotron -->
 
-    <!-- List Course -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <% for( let i = 0; i < result.length; i++ ) { %>
-                <div class="col">
-                    <div class="card shadow p-3 mb-5 bg-body rounded">
-                        <img src="/img/<%= result[i].thumbnail %>" class="card-img-top" alt="Image course">
-                        <div class="card-body">
-                            <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">
-                                <% if (result[i].price == 0){ %>
-                                Gratis
-                                <% } else { %>
-                                Premuim
-                                <a href="#"
-                                    class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded"><%= result[i].price %></a>
-                                <% } %></a>
-                            <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>"
-                                    class="text-dark"><%= result[i].title %></a>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-                <% } %>
-                <!-- <div class="col">
+                        <!-- List Course -->
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    <% for( let i=0; i < result.length; i++ ) { %>
+                                        <div class="col">
+                                            <div class="card shadow p-3 mb-5 bg-body rounded">
+                                                <img src="/img/<%= result[i].thumbnail %>" class="card-img-top"
+                                                    alt="Image course">
+                                                <div class="card-body">
+                                                    <a href="#"
+                                                        class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">
+                                                        <% if (result[i].price==0){ %>
+                                                            Gratis
+                                                            <% } else { %>
+                                                                Premuim
+                                                                <a href="#"
+                                                                    class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">
+                                                                    <%= result[i].price %>
+                                                                </a>
+                                                                <% } %>
+                                                    </a>
+                                                    <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>"
+                                                            class="text-dark">
+                                                            <%= result[i].title %>
+                                                        </a>
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                            <!-- <div class="col">
                     <div class="card shadow p-3 mb-5 bg-body rounded">
                         <img src="/img/image-course-2.png" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -97,12 +114,12 @@
                         </div>
                     </div>
                 </div> -->
-            </div>
-        </div>
-    </div>
-    <!-- End of List Course -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of List Course -->
 
-    <%- include("../partials/footer.ejs") %>
+                        <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>

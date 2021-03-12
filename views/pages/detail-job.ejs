@@ -83,8 +83,14 @@
                                         </div>
                                     </div>
                                     <div class="btn-desk">
-                                        <a href="mailto:support@gotjeh.com" type="submit" class="btn btn-mulai">Daftar
-                                            Sekarang</a>
+                                        <% if (!session.token) { %>
+                                            <a href="/login" type="submit" class="btn btn-mulai">Daftar
+                                                Sekarang</a>
+                                            <% } else { %>
+                                                <a href="mailto:<%= result.job_email %> " type="submit"
+                                                    class="btn btn-mulai">Daftar
+                                                    Sekarang</a>
+                                                <% } %>
                                     </div>
                                 </div>
                             </div>
