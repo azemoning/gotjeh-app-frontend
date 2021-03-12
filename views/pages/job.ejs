@@ -32,70 +32,87 @@
 
 <body>
     <% if (session.token) { %>
-    <%- include("../partials/navbar-user.ejs") %>
-    <% } else { %>
-    <%- include("../partials/navbar.ejs") %>
-    <% } %>
+        <%- include("../partials/navbar-user.ejs") %>
+            <% } else { %>
+                <%- include("../partials/navbar.ejs") %>
+                    <% } %>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron jumbotron-fluid">
-        <div class="box-container">
-            <div class="col-12">
-                <h3 class="get-job text-capitalize">Dapatkan Pekerjaan Sekarang!</h3>
-                <p class="dscrb-title">Tunggu apa lagi? Yuk bekerja sekarang!</p>
+                        <!-- Jumbotron -->
+                        <section class="jumbotron jumbotron-fluid">
+                            <div class="box-container">
+                                <div class="col-12">
+                                    <h3 class="get-job text-capitalize">Dapatkan Pekerjaan Sekarang!</h3>
+                                    <p class="dscrb-title">Tunggu apa lagi? Yuk bekerja sekarang!</p>
+                                    <form action="/job" method="get">
+                                        <div class="row justify-content-center">
+                                            <div class="bar-srch">
+                                                <input type="text" name="search"
+                                                    placeholder="masukkan minimal 3 karakter">
+                                                <input type="submit" style="display: none;">
+                                            </div>
+                                        </div>
+                                    </form>
 
-                <div class="row justify-content-center">
-                    <div class="bar-srch">
-                        <input type="text" name="Search" placeholder="masukkan minimal 3 karakter">
-                    </div>
-                </div>
+                                    <div class="row justify-content-center pd-shorts">
+                                        <p class="shortby mr-3 my-auto">Kategori:</p>
+                                        <button class="btn btn-outline-light shorts mr-3"
+                                            onclick="location.href='/job'">Semua</button>
+                                        <% for( let index=0; index < categories.length; index++ ) { %>
+                                            <button class="btn btn-outline-light shorts mr-3"
+                                                onclick="location.href='/job?category=<%= categories[index].id %>'">
+                                                <%= categories[index].name %>
+                                            </button>
+                                            <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of Jumbotron -->
 
-                <div class="row justify-content-center pd-shorts">
-                    <p class="shortby mr-3 my-auto">Kategori:</p>
-                    <button class="btn btn-outline-light shorts mr-3">Semua</button>
-                    <button class="btn btn-outline-light shorts mr-3">Desain</button>
-                    <button class="btn btn-outline-light shorts">Digital Marketing</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Jumbotron -->
+                        <!-- Ask -->
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col post-job">
+                                            <p class="up">Ingin cari tenaga freelance yang kamu butuhkan?</p><br>
+                                            <a href="/post-job"><button class="btn btn-post">Klik Disini!</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of Ask -->
 
-    <!-- Ask -->
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-                <div class="row">
-                    <div class="col post-job">
-                        <p class="up">Ingin cari tenaga freelance yang kamu butuhkan?</p><br>
-                        <a href="/post-job"><button class="btn btn-post">Klik Disini!</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of Ask -->
-
-    <!-- List Job -->
-    <div class="container">
-        <% for( let index = 0; index < result.length; index++ ) { %>
-        <div class="row job-list">
-            <div class="col-2 pict-list">
-                <img src="/img/<%= result[index].thumbnail %>" alt="thumbnail-job" class="img-job"
-                style="height: 170px; width: 190px;">        
-            </div>
-            <div class="col-10 desc-list">
-                <p class="title"><%= result[index].job_name %></p>
-                <p class="desc"><%= result[index].content %></p>
-                <p><a class="view-more" href="/job/detail/<%= result[index].id %>">Selengkapnya</a></p>
-                <p class="salary">Rp <%= result[index].fee %></p>
-                <p class="category"><%= result[index].category_id %></ap>
-                <button  class="btn btn-daftar" href="<%= result.category_id %>">Lamar Sekarang</button>
-            </div>
-        </div>
-        <% } %>
-    </div>
-    <!-- <div class="container mt-3">
+                        <!-- List Job -->
+                        <div class="container">
+                            <% for( let index=0; index < result.length; index++ ) { %>
+                                <div class="row job-list">
+                                    <div class="col-2 pict-list">
+                                        <img src="/img/<%= result[index].thumbnail %>" alt="thumbnail-job"
+                                            class="img-job" style="height: 170px; width: 190px;">
+                                    </div>
+                                    <div class="col-10 desc-list">
+                                        <p class="title">
+                                            <%= result[index].job_name %>
+                                        </p>
+                                        <p class="desc">
+                                            <%= result[index].content %>
+                                        </p>
+                                        <p><a class="view-more"
+                                                href="/job/detail/<%= result[index].id %>">Selengkapnya</a></p>
+                                        <p class="salary">Rp <%= result[index].fee %>
+                                        </p>
+                                        <p class="category">
+                                            <%= result[index].category.name %>
+                                        </p>
+                                        <button class="btn btn-daftar" href="<%= result.category_id %>">Lamar
+                                            Sekarang</button>
+                                    </div>
+                                </div>
+                                <% } %>
+                        </div>
+                        <!-- <div class="container mt-3">
         <div class="row justify-content-center">
             <div class="card mb-3 shadow bg-body rounded" style="max-width: 100%; border-radius: 10px;">
                 <div class="row g-0">
@@ -183,10 +200,10 @@
             </div>
         </div>
     </div> -->
-    <!-- List Job -->
+                        <!-- List Job -->
 
-    <!-- job empty -->
-    <!-- <section class="empty-room">
+                        <!-- job empty -->
+                        <!-- <section class="empty-room">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col">
@@ -205,9 +222,9 @@
                 </div>
             </div>
         </section> -->
-    <!-- End of job empty -->
+                        <!-- End of job empty -->
 
-    <%- include("../partials/footer.ejs") %>
+                        <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>

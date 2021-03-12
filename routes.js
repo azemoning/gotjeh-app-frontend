@@ -156,22 +156,45 @@ router.post("/post-job", async (req, res) => {
   }
 });
 
-router.get("/course", (req, res) => {
+router.get("/course", async (req, res) => {
+  if (req.query.search) {
+    try {
+      const categories = await axios.get(`${baseUrl}/api/categories`)
+      return axios
+        .get(`${baseUrl}/api/courses/search?search=${req.query.search}`)
+        .then((result) => {
+          res.render("pages/course", { result: result.data, session: req.session, categories: categories.data });
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  if (req.query.category) {
+    try {
+      const categories = await axios.get(`${baseUrl}/api/categories`)
+      return axios
+        .get(`${baseUrl}/api/courses/filter?category=${req.query.category}`)
+        .then((result) => {
+          console.log(result.data);
+          res.render("pages/course", { result: result.data, session: req.session, categories: categories.data });
+        })
+        .catch((err) => console.log(err));
+    } catch (error) {
+      console.log(error);
+    }
+  }
   try {
+    const categories = await axios.get(`${baseUrl}/api/categories`)
     return axios
       .get(`${baseUrl}/api/courses`)
       .then((result) => {
-        res.render("pages/course", {
-          result: result.data,
-          session: req.session,
-        });
-        // console.log(result.data);
+        res.render("pages/course", { result: result.data, session: req.session, categories: categories.data });
       })
       .catch((err) => console.log(err));
   } catch (error) {
     console.log(error);
   }
-  res.render("pages/course");
 });
 
 router.get("/course/detail/:id", (req, res) => {
@@ -184,7 +207,6 @@ router.get("/course/detail/:id", (req, res) => {
           result: result.data,
           session: req.session,
         });
-        console.log(result.data);
       })
       .catch((err) => console.log(err));
   } catch (error) {
