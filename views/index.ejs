@@ -59,12 +59,16 @@
                                     <div class="col-12 popular-course">
                                         <div class="row">
                                             <% for( let index=0; index < result.length; index++ ) { %>
-                                                <div class="col pop-course">
+                                                <div class="col-3 mx-auto pop-course">
+
+                                                    <!-- Gambar -->
                                                     <div class="photo">
                                                         <a href="/course/detail/<%= result[index].id %> "><img
                                                                 src="/img/image-course-1.png" class="card-img-top foto"
                                                                 alt="..."></a>
                                                     </div>
+
+                                                    <!-- Price Tag -->
                                                     <div class="free">
                                                         <% if (result[index].price==0) { %>
                                                             <p>Gratis</p>
@@ -72,8 +76,9 @@
                                                                 <p>Premium</p>
                                                                 <% } %>
                                                     </div>
-                                                    <h5 class="card-title"><a
-                                                            href="/course/detail/<%= result[index].id %> "
+
+                                                    <!-- Deskripsi -->
+                                                    <h5 class="card-title"><a href="/course/detail/<%= result[index].id %> "
                                                             class="text-dark ds-course">
                                                             <%= result[index].title %>
                                                         </a></h5>

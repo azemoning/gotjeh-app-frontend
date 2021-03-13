@@ -2,8 +2,8 @@ const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-const baseUrl = process.env.API_URL;
-// const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
+// const baseUrl = process.env.API_URL;
+const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
 
 router.get("/", (req, res) => {
   try {

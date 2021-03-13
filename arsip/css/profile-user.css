@@ -9,7 +9,6 @@ body {
 #sideNav{
    background: #0F1134;
    width: 350px;
-   /* height: 670px; */
    height: 100%;
    float: left;
    position: fixed;
@@ -102,10 +101,11 @@ p .txt {
     width: 150px;
     margin-bottom: 50px;
     margin-top: 30px;
+    float: left;
 }
+
 /* Search Bar */
 input[type=text] {
-    width: 525px;
     height: 30px;
     background-image: url(../img/Group.png);
     background-repeat: no-repeat;
@@ -116,7 +116,6 @@ input[type=text] {
     font-size: 16px;
     background-color: rgba(33, 33, 33, 0.1);
     padding: 12px 30px 12px 40px;
-    margin-left: 200px;
     margin-top: 30px;
 }
 
@@ -160,8 +159,7 @@ input[type=text] {
     font-size: 13px;
     line-height: 19px;
     color: #212121;
-    margin-top: 20px;
+    /* margin-top: 20px;
     margin-left: 5px;
-    margin-right: 5px;
-    text-align: center;
+    margin-right: 5px; */
 }

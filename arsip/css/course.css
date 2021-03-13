@@ -80,7 +80,7 @@ input[type=text] {
 }
 
 /* Course Category */
-.pop-course {
+/* .course {
     border: 1px solid rgba(33, 33, 33, 0.1);
     box-sizing: border-box;
     border-radius: 10px;
@@ -90,7 +90,7 @@ input[type=text] {
     margin-top: 50px;
     margin-bottom: 0px;
     margin-inline: 38px;
-}
+} */
 
 .ds-course {
     font-size: 16px;
@@ -111,12 +111,6 @@ input[type=text] {
     height: 24px;
     display: block;
     text-decoration: none;
-    color: black;
-}
-
-.free a:hover {
-    background-color: #cf9f00;
-    border: #cf9f00;
     color: black;
 }
 
