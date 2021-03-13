@@ -33,7 +33,7 @@
                     <div class="col-md-12">
                         <a href="/"><img src="/img/btn-back.png" alt="" class="mb-4" width="40" height="40"></a>
                         <h3 class="mb-4 text-capitalize">Daftar</h3>
-                        <form action="#" method="post" id="form">
+                        <form onSubmit="return checkPassword(this)" action="#" method="post" id="form">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="first-name">Nama Depan</label>
@@ -53,9 +53,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="d-block">Kata Sandi</label>
-                                <input id="password" type="password" class="form-control pwstrength"
+                                <input id="password1" type="password" class="form-control pwstrength"
                                     data-indicator="pwindicator" name="password" aria-describedby="passwordHelpInline"
-                                    placeholder="Ketikkan kata sandi Anda" required>
+                                    placeholder="Ketikkan kata sandi Anda" minlength="8" maxlength="20" required>
                                 <small id="passwordHelpInline" class="text-muted"> Must be 8-20 characters
                                     long.</small>
                                 <div id="pwindicator" class="pwindicator">
@@ -66,7 +66,7 @@
                             <div class="form-group mb-4">
                                 <label for="password2" class="d-block">Masukkan Ulang Kata Sandi</label>
                                 <input id="password2" type="password" class="form-control"
-                                    placeholder="ketikkan ulang kata sandi Anda" required>
+                                    placeholder="Ketikkan ulang kata sandi Anda" minlength="8" maxlength="20" required>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-block btn-lg text-capitalize">Daftar
@@ -96,6 +96,14 @@
         jQuery(function ($) {
             $('.pwstrength').pwstrength();
         });
+    </script>
+
+    <script type="text/javascript">
+        function checkPassword(form) {
+            console.log(form.password1.value);
+            console.log(form.password2.value);
+            //return true;
+        }
     </script>
 </body>
 

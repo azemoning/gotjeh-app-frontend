@@ -56,8 +56,10 @@
                                 <div class="col-6">
                                     <div class="form-group">
                                         <label for="gaji">Gaji</label>
-                                        <input type="text" class="form-control" placeholder="Tulis gaji yang ditawarkan"
-                                            id="gaji" name="fee" required>
+                                        <input type="text" maxlength="7"
+                                            oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control"
+                                            placeholder="Tulis gaji yang ditawarkan" id="gaji" name="fee" max="7"
+                                            minrequired>
                                     </div>
                                 </div>
                                 <div class="col-6">

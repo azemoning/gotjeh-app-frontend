@@ -193,7 +193,7 @@ input[type=text] {
     font-weight: 600;
     font-size: 12px;
     line-height: 20px;
-    width: 100px;
+    width: 130px;
     height: 24px;
     text-align: center;
     border: 1px solid #121212;
@@ -217,7 +217,7 @@ input[type=text] {
     line-height: 20px;
     padding-top: 3px;
     margin-top: 20px;
-    margin-left: -250px;
+    margin-left: 15px;
 }
 
 /* ----------------------- */
