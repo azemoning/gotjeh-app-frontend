@@ -2,8 +2,8 @@ const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-// const baseUrl = process.env.API_URL;
-const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
+const baseUrl = process.env.API_URL;
+// const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
 
 router.get("/", (req, res) => {
   try {
@@ -231,8 +231,21 @@ router.get("/course/detail/:id", (req, res) => {
   }
 });
 
-router.get("/course/tutorials", (req, res) => {
-  res.render("pages/tutorial-course");
+router.get("/course/tutorials/:id", (req, res) => {
+  const { id } = req.params;
+  try {
+    return axios
+      .get(`${baseUrl}/api/courses/${id}`)
+      .then((result) => {
+        res.render("pages/tutorial-course", {
+          result: result.data,
+          session: req.session,
+        });
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/faq", (req, res) => {

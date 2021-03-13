@@ -46,17 +46,26 @@
                                         sini deh! <br>
                                         Semuanya gratis dan bisa diakses kapan aja</p>
 
-                                    <div class="row justify-content-center">
-                                        <div class="bar-srch">
-                                            <input type="text" name="Search" placeholder="masukkan minimal 3 karakter">
+                                    <form action="/course" method="GET">
+                                        <div class="row justify-content-center">
+                                            <div class="bar-srch">
+                                                <input type="text" name="search"
+                                                    placeholder="masukkan minimal 3 karakter">
+                                                <input type="submit" value="" style="display: none;">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
 
                                     <div class="row justify-content-center pd-shorts">
                                         <p class="shortby mr-3 my-auto">Kategori:</p>
-                                        <button class="btn btn-outline-light shorts mr-3">Semua</button>
-                                        <button class="btn btn-outline-light shorts mr-3">Desain</button>
-                                        <button class="btn btn-outline-light shorts">Digital Marketing</button>
+                                        <button class="btn btn-outline-light shorts mr-3"
+                                            onclick="location.href='/course'">Semua</button>
+                                        <% for( let index=0; index < categories.length; index++ ) { %>
+                                            <button class="btn btn-outline-light shorts mr-3"
+                                                onclick="location.href='/course?category=<%= categories[index].id %>'">
+                                                <%= categories[index].name %>
+                                            </button>
+                                            <% } %>
                                     </div>
                                 </div>
                             </div>
