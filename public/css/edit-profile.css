@@ -1,9 +1,6 @@
-* {
-    font-family: Poppins;
-}
-
 body {
     background-color: #f9f9f9;
+    font-family: Poppins;
 }
 
 #sideNav{
@@ -27,6 +24,14 @@ body {
     height: 50px;
 }
 
+/* Copyright */
+#footer {
+    color: #F9F9F9;
+    font-size: 16px;
+    height: 40px;
+    margin-top: 25px;
+}
+
 /* Right Side */
 .txt {
     margin-top: 50px;
@@ -46,8 +51,6 @@ p .txt {
     border-bottom: 2px solid #F5C116;
     width: 30%;
     margin: auto;
-    /* padding-bottom: 5px;
-    margin-bottom: -8px; */
 }
 
 /* Edit Profile */
@@ -60,12 +63,17 @@ p .txt {
 /* Edit foto */
 .foto {
     position: fixed;
+    /* background-image: url(../img/profile.png);
+    background-repeat: no-repeat; */
 }
 
 .profile-pic-div{
     height: 140px;
     width: 140px;
     transform: translate(-50%,-50%);
+    /* background-image: url(../img/profile.png);
+    background-repeat: no-repeat;
+    background-size: 140px 140px; */
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid grey;
