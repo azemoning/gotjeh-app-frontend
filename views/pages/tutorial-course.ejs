@@ -16,8 +16,8 @@
         <!-- Head (Logo & Burger Button) -->
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="#"><img src="/img/logo.png" style="height: 50px; width: 109px;"
-                    title="Gotjeh"></a>
+            <a class="navbar-brand" href="/"><img src="/img/logo.png" style="height: 50px; width: 109px;"
+                    title="Gotjeh" /></a>
             <!-- Burger Button & Dropdown -->
             <div class="dropdown">
                 <img src="/img/burger-button.png" onclick="myFunction()" class="dropbtn">
@@ -38,19 +38,11 @@
             <div class="row">
                 <nav class="col left">
                     <ul class="nav flex-column">
-                        <% for( let index in result.course_sections ) { %>
-                            <% if (index==0) { %>
-                                <li><a href="#<%= 'form-' + index %> " class="nav-link current text-white my-2 activ"
-                                        data-toggle="tab">
-                                        <%= result.course_sections[index].name %>
-                                    </a></li>
-                                <% } else {%>
-                                    <li><a href="#<%= 'form-' + index %> " class="nav-link text-white my-2"
-                                            data-toggle="tab">
-                                            <%= result.course_sections[index].name %>
-                                        </a></li>
-                                    <% } %>
-                                        <% } %>
+                        <li><a href="#one" class="nav-link current text-white my-2 activ" data-toggle="tab">1. UX
+                                Introduction
+                            </a></li>
+                        <li><a href="#two" class="nav-link text-white my-2" data-toggle="tab">2. Design Process
+                            </a></li>
                     </ul>
                 </nav>
             </div>
@@ -71,24 +63,17 @@
     <div class="row main">
         <div class="col right">
             <div class="tab-content flex-center">
-
-                <% for( let index in result.course_sections ) { %>
-                    <% if (index==0) { %>
-                        <div class="tab-pane fade show activ" id="<%= 'form-' + index %> ">
-                            <div class="typeform-widget"
-                                data-url="https://form.typeform.com/to/rlwcUnqw?typeform-medium=embed-snippet"
-                                data-transparency="50" data-hide-headers="true" data-hide-footer="true"
-                                style="width: 100%; height: 500px;"></div>
-                        </div>
-                        <% } else { %>
-                            <div class="tab-pane fade show" id="<%= 'form-' + index %> ">
-                                <div class="typeform-widget"
-                                    data-url="https://form.typeform.com/to/rlwcUnqw?typeform-medium=embed-snippet"
-                                    data-transparency="50" data-hide-headers="true" data-hide-footer="true"
-                                    style="width: 100%; height: 500px;"></div>
-                            </div>
-                            <% } %>
-                                <% } %>
+                <div class="tab-pane fade show form active" id="one">
+                    <div class="typeform-widget"
+                        data-url="https://form.typeform.com/to/rlwcUnqw?typeform-medium=embed-snippet"
+                        data-transparency="50" data-hide-headers="true" data-hide-footer="true"></div>
+                </div>
+                <div class="tab-pane fade show form" id="two">
+                    <div class="typeform-widget"
+                        data-url="https://form.typeform.com/to/qYN0o4NM?typeform-medium=embed-snippet"
+                        data-transparency="50" data-hide-headers="true" data-hide-footer="true">
+                    </div>
+                </div>
 
             </div>
         </div>
