@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- font googleapis -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="/css/job.css">
+    <link rel="stylesheet" href="/css/header-footer.css">
+
+    <!-- Title -->
+    <title>Gotjeh: Nyasar???</title>
+</head>
+
+<body>
+    <% if (session.token) { %>
+        <%- include("../partials/navbar-user.ejs") %>
+            <% } else { %>
+                <%- include("../partials/navbar.ejs") %>
+                    <% } %>
+
+                        <!-- Jumbotron -->
+                        <section class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                                <div class="col-12">
+                                    <h3 class="get-job text-capitalize">Yuk, Tingkatkan Keterampilanmu Sekarang!</h3>
+                                    <p class="dscrb-title">Daripada nganggur di rumah, mending belajar hal-hal baru di
+                                        sini deh! <br>
+                                        Semuanya gratis dan bisa diakses kapan aja</p>
+
+                                    <div class="row justify-content-center">
+                                        <div class="bar-srch">
+                                            <input type="text" name="Search" placeholder="masukkan minimal 3 karakter">
+                                        </div>
+                                    </div>
+
+                                    <div class="row justify-content-center pd-shorts">
+                                        <p class="shortby mr-3 my-auto">Kategori:</p>
+                                        <button class="btn btn-outline-light shorts mr-3">Semua</button>
+                                        <button class="btn btn-outline-light shorts mr-3">Desain</button>
+                                        <button class="btn btn-outline-light shorts">Digital Marketing</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of Jumbotron -->
+
+                        <!-- job empty -->
+                        <section class="empty-room">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col-lg">
+                                                <p class="sorry">Sayang sekali, kursus yang kamu cari<br>tidak
+                                                    tersedia.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg">
+                                                <img src="/img/box-1.svg" class="box">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- End of job empty -->
+
+                        <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>

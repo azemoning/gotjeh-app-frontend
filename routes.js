@@ -2,8 +2,8 @@ const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-const baseUrl = process.env.API_URL;
-// const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
+// const baseUrl = process.env.API_URL;
+const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
 
 router.get("/", (req, res) => {
   res.render("index", { session: req.session });
@@ -77,7 +77,11 @@ router.get("/job", async (req, res) => {
       return axios
         .get(`${baseUrl}/api/jobs/search?search=${req.query.search}`)
         .then((result) => {
-          res.render("pages/job", { result: result.data, session: req.session, categories: categories.data });
+          if (!result.data.length) {
+            res.render("pages/job-empty", { result: result.data, session: req.session, categories: categories.data });
+          } else {
+            res.render("pages/job", { result: result.data, session: req.session, categories: categories.data });
+          }
         })
         .catch((err) => console.log(err));
     } catch (error) {
@@ -163,7 +167,11 @@ router.get("/course", async (req, res) => {
       return axios
         .get(`${baseUrl}/api/courses/search?search=${req.query.search}`)
         .then((result) => {
-          res.render("pages/course", { result: result.data, session: req.session, categories: categories.data });
+          if (!result.data.length) {
+            res.render("pages/course-empty", { result: result.data, session: req.session, categories: categories.data });
+          } else {
+            res.render("pages/course", { result: result.data, session: req.session, categories: categories.data });
+          }
         })
         .catch((err) => console.log(err));
     } catch (error) {
