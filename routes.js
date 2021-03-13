@@ -6,7 +6,16 @@ const router = require("express").Router();
 const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
 
 router.get("/", (req, res) => {
-  res.render("index", { session: req.session });
+  try {
+    return axios
+      .get(`${baseUrl}/api/courses/popular`)
+      .then((result) => {
+        res.render("index", { session: req.session, result: result.data });
+      })
+      .catch((err) => console.log(err));
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.get("/forgot", (req, res) => {

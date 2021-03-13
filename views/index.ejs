@@ -58,40 +58,27 @@
                                 <div class="row justify-content-center">
                                     <div class="col-12 popular-course">
                                         <div class="row">
-                                            <div class="col pop-course">
-                                                <div class="photo">
-                                                    <a href="/course/detail"><img src="/img/image-course-1.png"
-                                                            class="card-img-top foto" alt="..."></a>
+                                            <% for( let index=0; index < result.length; index++ ) { %>
+                                                <div class="col pop-course">
+                                                    <div class="photo">
+                                                        <a href="/course/detail/<%= result[index].id %> "><img
+                                                                src="/img/image-course-1.png" class="card-img-top foto"
+                                                                alt="..."></a>
+                                                    </div>
+                                                    <div class="free">
+                                                        <% if (result[index].price==0) { %>
+                                                            <p>Gratis</p>
+                                                            <% } else { %>
+                                                                <p>Premium</p>
+                                                                <% } %>
+                                                    </div>
+                                                    <h5 class="card-title"><a
+                                                            href="/course/detail/<%= result[index].id %> "
+                                                            class="text-dark ds-course">
+                                                            <%= result[index].title %>
+                                                        </a></h5>
                                                 </div>
-                                                <div class="free">
-                                                    <p>Free</p>
-                                                </div>
-                                                <h5 class="card-title"><a href="/course/detail"
-                                                        class="text-dark ds-course">Belajar Dasar User Experience dan
-                                                        User Interface</a></h5>
-                                            </div>
-                                            <div class="col pop-course">
-                                                <div class="photo">
-                                                    <a href="/course/detail"><img src="/img/image-course-2.png"
-                                                            class="card-img-top foto" alt="..."></a>
-                                                </div>
-                                                <div class="premium">
-                                                    <p>Premium</p>
-                                                </div>
-                                                <h5 class="card-title"><a href="/course/detail"
-                                                        class="text-dark ds-course">Belajar Teknik Memotret yang Baik
-                                                        dan Benar</a></h5>
-                                            </div>
-                                            <div class="col pop-course">
-                                                <a href="/course/detail"><img src="/img/image-course-3.png"
-                                                        class="card-img-top foto" alt="..."></a>
-                                                <div class="premium">
-                                                    <p>Premium</p>
-                                                </div>
-                                                <h5 class="card-title text-dark"><a href="/course/detail"
-                                                        class="text-dark ds-course">Belajar Digital Marketing dan
-                                                        Strategi Media Sosial</a></h5>
-                                            </div>
+                                                <% } %>
                                         </div>
                                     </div>
                                 </div>
