@@ -42,7 +42,6 @@
                 <p><a href="/faq" class="txt">F.A.Q</a></p>
                 <p><a href="/about" class="txt">Tentang Kami</a></p>
                 <p><a href="/logout" class="txt">Keluar</a></p>
-                <p><a href="/" class="txt">Kembali</a></p>
             </center>
             <br>
             <!-- Copyright -->
@@ -72,7 +71,13 @@
                     <div class="col">
                         <div class="center">
                             <p class="atas">
-                                <%= resultUserCourse.length %>
+                                <% let totalDesain=0 %>
+                                    <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
+                                        <% if (resultUserCourse[index].course_details.category.name=='Desain' ) { %>
+                                            <% totalDesain +=1 %>
+                                                <% } %>
+                                                    <% } %>
+                                                        <%= totalDesain %>
                             </p>
                             <p class="bawah">Kelas Desain</p>
                         </div>
@@ -80,9 +85,16 @@
                     <div class="col">
                         <div class="left">
                             <p class="atas">
-                                <%= resultUserCourse.length %>
+                                <% let totalDigitalMarketing=0 %>
+                                    <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
+                                        <% if (resultUserCourse[index].course_details.category.name=='Digital Marketing'
+                                            ) { %>
+                                            <% totalDigitalMarketing +=1 %>
+                                                <% } %>
+                                                    <% } %>
+                                                        <%= totalDigitalMarketing %>
                             </p>
-                            <p class="bawah">Digital Marketing</p>
+                            <p class="bawah">Kelas Digital Marketing</p>
                         </div>
                     </div>
                 </div>
@@ -94,7 +106,7 @@
             </div>
             <div class="col-2">
                 <div class="bar-srch">
-                    <input type="text" style="width: 525px; margin-left: 25px;" name="search" placeholder="Search">
+                    <input type="text" style="width: 580px; margin-left: -32px;" name="search" placeholder="Search">
                 </div>
             </div>
         </div>
@@ -109,7 +121,7 @@
                     <div class="ds-kursus">
                         <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>" class="ds-course">
                             <p>
-                                <%= resultUserCourse[index].course_id %>
+                                <%= resultUserCourse[index].course_details.title %>
                             </p>
                         </a>
                     </div>
