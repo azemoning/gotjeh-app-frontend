@@ -2,8 +2,10 @@ const { default: axios } = require("axios");
 
 const router = require("express").Router();
 
-// const baseUrl = process.env.API_URL;
-const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
+const baseUrl = process.env.API_URL;
+// const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
+// const baseUrl = "http://localhost:3000";
+
 
 router.get("/", (req, res) => {
   try {
@@ -46,8 +48,9 @@ router.post("/login", async (req, res) => {
     return axios
       .post(`${baseUrl}/api/auth/login`, req.body)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         req.session.token = result.data.token;
+        req.session.user_id = result.data.id;
         res.redirect("/");
       })
       .catch((err) => console.log(err));
@@ -57,7 +60,7 @@ router.post("/login", async (req, res) => {
 });
 
 router.get("/logout", (req, res) => {
-  delete req.session.token;
+  req.session.destroy()
   res.redirect("/");
 });
 
@@ -256,13 +259,72 @@ router.get("/about", (req, res) => {
   res.render("pages/about-us", { session: req.session });
 });
 
-router.get("/profile", (req, res) => {
-  res.render("pages/profile");
+router.get("/profile/:id", async (req, res) => {
+  const { id } = req.params
+  console.log(id);
+  const getUserData = axios.get(`${baseUrl}/api/users/${id}`)
+  const getUserCourse = axios.get(`${baseUrl}/api/courses/enrolled/`, {
+    params: {
+      user_id: id
+    }
+  })
+  try {
+    return axios
+      .all([getUserData, getUserCourse])
+      .then(axios.spread((...responses) => {
+        const resultUserData = responses[0]
+        const resultUserCourse = responses[1]
+        res.render("pages/profile", { session: req.session, resultUserData: resultUserData.data, resultUserCourse: resultUserCourse.data });
+      }))
+  } catch (error) {
+
+  }
 });
 
-router.get("/profile/edit", (req, res) => {
-  res.render("pages/edit-profile");
+router.get("/profile/edit/:id", (req, res) => {
+  const { id } = req.params
+  try {
+    return axios
+      .get(`${baseUrl}/api/users/${id}`)
+      .then(result => {
+        res.render("pages/edit-profile", { session: req.session, result: result.data });
+      })
+  } catch (error) {
+
+  }
 });
+
+router.post("/profile/edit/:id", (req, res) => {
+  const { id } = req.params
+  try {
+    return axios
+      .post(`${baseUrl}/api/users/${id}`, { id: id, ...req.body })
+      .then(result => {
+        res.render("pages/profile", { session: req.session, result: result.data });
+      })
+      .catch(err => {
+        console.error(err);
+      })
+  } catch (error) {
+
+  }
+});
+
+router.post("/course/enroll/:id", async (req, res) => {
+  const { id } = req.params
+  try {
+    return axios
+      .post(`${baseUrl}/api/users/courses/enroll`, {
+        user_id: req.session.user_id,
+        course_id: id
+      })
+      .then(result => {
+        res.redirect(`/course/tutorials/${id}`)
+      })
+  } catch (error) {
+
+  }
+})
 
 router.post("/subscriptions", async (req, res) => {
   // console.log(req.body);

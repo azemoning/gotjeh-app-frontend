@@ -25,7 +25,7 @@
                 <a class="nav-item nav-link" href="/faq">F.A.Q</a>
                 <a class="nav-item nav-link" href="/about">Tentang Kami</a>
                 <li class="nav-item dropdown">
-                    <img src="/img/avatar.jpg" class="avatar" alt="avatar-users" href="#" id="navbarDropdown"
+                    <img src="/img/avatar-pict.jpg" class="avatar" alt="avatar-users" href="#" id="navbarDropdown"
                         role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                         style="height: 30px; width: 30px; margin-top: 6px;">
                     <img src="/img/Drop-down.png" class="arrow" href="#" id="navbarDropdown" role="button"
@@ -33,7 +33,9 @@
                         style="height: 15px; width: 15px; margin-top: 6px;">
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <div class="list-dropdown">
-                            <a class="dropdown-item" href="/profile"><i class="fas fa-user-alt"></i> Profil</a>
+                            <a class="dropdown-item" href="/profile/<%= session.user_id %> "><i
+                                    class="fas fa-user-alt"></i>
+                                Profil</a>
                         </div>
                         <div class="list-dropdown">
                             <a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt"></i> Keluar</a>
