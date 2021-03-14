@@ -142,7 +142,6 @@ body {
         border-radius: 10px;
         margin: 75px;
         height: 436px;
-        width: 320px;
         margin-top: 50px;
         margin-bottom: 100px;
         margin-inline: 38px;
@@ -168,21 +167,6 @@ body {
         display: block;
         text-decoration: none;
         color: black;
-    }
-
-    /* .free a:hover {
-        background-color: #cf9f00;
-        border: #cf9f00;
-        color: black;
-    } */
-
-    .foto {
-        height: 231px;
-        padding-top: 25px;
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 271px;
-        border-radius: 10px;
     }
 
     .btn-view {
