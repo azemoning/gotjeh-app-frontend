@@ -148,7 +148,7 @@ input[type=text] {
     width: 302px;
 }
 
-.free, .premium {
+.free {
     margin-left: 10px;
     border: 1px solid #121212;
     box-sizing: border-box;

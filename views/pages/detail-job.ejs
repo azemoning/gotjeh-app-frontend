@@ -68,8 +68,8 @@
                                         <div class="row">
                                             <div class="col-10.5 desc">
                                                 <h3>Deskripsi Pekerjaan</h3>
-                                                <pre class="deskripsi">
-                                                    <%= result.content %>
+                                                <pre class="deskripsi" id="job-content">
+                                                    <%= '\n' + result.content %>
                                                 </pre>
                                                 <a href="#"
                                                     class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">
@@ -87,8 +87,8 @@
                                             <a href="/login" type="submit" class="btn btn-mulai">Daftar
                                                 Sekarang</a>
                                             <% } else { %>
-                                                <a href="mailto:<%= result.job_email %> " type="submit"
-                                                    class="btn btn-mulai">Daftar
+                                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=<%= result.job_email %>&su=Lamaran Freelance <%= result.job_name %>"
+                                                    type="submit" class="btn btn-mulai" target="_blank">Daftar
                                                     Sekarang</a>
                                                 <% } %>
                                     </div>

@@ -141,7 +141,7 @@ input[type=text] {
 }
 
 .foto {
-    height: 160px;
+    height: auto;
     width: 200px;
     border-radius: 10px;
 }

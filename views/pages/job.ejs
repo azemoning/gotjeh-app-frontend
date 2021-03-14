@@ -32,90 +32,80 @@
 
 <body>
     <% if (session.token) { %>
-    <%- include("../partials/navbar-user.ejs") %>
-    <% } else { %>
-    <%- include("../partials/navbar.ejs") %>
-    <% } %>
-
-    <!-- Jumbotron -->
-    <section class="jumbotron jumbotron-fluid">
-        <div class="box-container">
-            <div class="col-12">
-                <h3 class="get-job text-capitalize">Dapatkan Pekerjaan Sekarang!</h3>
-                <p class="dscrb-title">Tunggu apa lagi? Yuk bekerja sekarang!</p>
-                <form action="/job" method="get">
-                    <div class="row justify-content-center">
-                        <div class="bar-srch">
-                            <input type="text" name="search" placeholder="masukkan minimal 3 karakter">
-                            <input type="submit" style="display: none;">
-                        </div>
-                    </div>
-                </form>
-
-                <div class="row justify-content-center pd-shorts">
-                    <p class="shortby mr-3 my-auto">Kategori:</p>
-                    <button class="btn btn-outline-light shorts mr-3" onclick="location.href='/job'">Semua</button>
-                    <% for( let index=0; index < categories.length; index++ ) { %>
-                    <button class="btn btn-outline-light shorts mr-3"
-                        onclick="location.href='/job?category=<%= categories[index].id %>'">
-                        <%= categories[index].name %>
-                    </button>
+        <%- include("../partials/navbar-user.ejs") %>
+            <% } else { %>
+                <%- include("../partials/navbar.ejs") %>
                     <% } %>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End of Jumbotron -->
 
-    <!-- Ask -->
-    <!-- <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col">
-                                    <div class="row">
-                                        <div class="col post-job">
-                                            <p class="up">Ingin cari tenaga freelance yang kamu butuhkan?</p><br>
-                                            <a href="/post-job"><button class="btn btn-post">Klik Disini!</button></a>
+                        <!-- Jumbotron -->
+                        <section class="jumbotron jumbotron-fluid">
+                            <div class="box-container">
+                                <div class="col-12">
+                                    <h3 class="get-job text-capitalize">Dapatkan Pekerjaan Sekarang!</h3>
+                                    <p class="dscrb-title">Tunggu apa lagi? Yuk bekerja sekarang!</p>
+                                    <form action="/job" method="get">
+                                        <div class="row justify-content-center">
+                                            <div class="bar-srch">
+                                                <input type="text" name="search"
+                                                    placeholder="masukkan minimal 3 karakter">
+                                                <input type="submit" style="display: none;">
+                                            </div>
                                         </div>
+                                    </form>
+
+                                    <div class="row justify-content-center pd-shorts">
+                                        <p class="shortby mr-3 my-auto">Kategori:</p>
+                                        <button class="btn btn-outline-light shorts mr-3"
+                                            onclick="location.href='/job'">Semua</button>
+                                        <% for( let index=0; index < categories.length; index++ ) { %>
+                                            <button class="btn btn-outline-light shorts mr-3"
+                                                onclick="location.href='/job?category=<%= categories[index].id %>'">
+                                                <%= categories[index].name %>
+                                            </button>
+                                            <% } %>
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-    <!-- End of Ask -->
+                        </section>
+                        <!-- End of Jumbotron -->
 
-    <!-- List Job -->
-    <div class="container">
-        <% for( let index=0; index < result.length; index++ ) { %>
-        <div class="row job-list">
-            <div class="col-2 pict-list">
-                <img src="/img/<%= result[index].thumbnail %>" alt="thumbnail-job" class="img-job"
-                    style="height: 170px; width: 190px;">
-            </div>
-            <div class="col-10 desc-list">
-                <p class="title">
-                    <%= result[index].job_name %>
-                </p>
-                <p class="desc">
-                    <%= result[index].content %>
-                </p>
-                <p><a class="view-more" href="/job/detail/<%= result[index].id %>">Selengkapnya</a></p>
-                <p class="salary">Rp <%= result[index].fee %>
-                </p>
-                <p class="category">
-                    <%= result[index].category.name %>
-                </p>
-                <% if (!session.token) { %>
-                <button class="btn btn-daftar" onclick="location.href='/login'">Lamar Sekarang</button>
-                <% } else { %>
-                <button class="btn btn-daftar" onclick="location.href='mailto:<%= result[index].job_email %>'">Lamar
-                    Sekarang</button>
-                <% } %>
-            </div>
-        </div>
-        <% } %>
-    </div>
-    <!-- List Job -->
+                        <!-- List Job -->
+                        <div class="container">
+                            <% for( let index=0; index < result.length; index++ ) { %>
+                                <div class="row job-list">
+                                    <div class="col-2 pict-list">
+                                        <img src="/img/<%= result[index].thumbnail %>" alt="thumbnail-job"
+                                            class="img-job" style="height: 170px; width: 190px;">
+                                    </div>
+                                    <div class="col-10 desc-list">
+                                        <p class="title">
+                                            <%= result[index].job_name %>
+                                        </p>
+                                        <p class="desc">
+                                            <%= result[index].content %>
+                                        </p>
+                                        <p><a class="view-more"
+                                                href="/job/detail/<%= result[index].id %>">Selengkapnya</a></p>
+                                        <p class="salary">Rp <%= result[index].fee %>
+                                        </p>
+                                        <p class="category">
+                                            <%= result[index].category.name %>
+                                        </p>
+                                        <% if (!session.token) { %>
+                                            <button class="btn btn-daftar" onclick="location.href='/login'">Lamar
+                                                Sekarang</button>
+                                            <% } else { %>
+                                                <button class="btn btn-daftar"
+                                                    onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=<%= result[index].job_email %>&su=Lamaran Freelance <%= result[index].job_name %>','_blank')">Lamar
+                                                    Sekarang</button>
+                                                <% } %>
+                                    </div>
+                                </div>
+                                <% } %>
+                        </div>
+                        <!-- List Job -->
 
-    <%- include("../partials/footer.ejs") %>
+                        <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>
