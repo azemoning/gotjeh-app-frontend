@@ -48,6 +48,7 @@ router.post("/login", async (req, res) => {
       .then((result) => {
         req.session.token = result.data.token;
         req.session.user_id = result.data.id;
+        axios.defaults.headers.common = { 'Authorization': `Bearer ${result.data.token}` }
         res.redirect("/");
       })
       .catch((err) => {

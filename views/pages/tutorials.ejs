@@ -1,21 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
+
+    <!-- font googleapis -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/course-te.css">
 
     <title>Gotjeh: Mari Belajar!</title>
 </head>
+
 <body>
 
     <div class="sidenav">
         <!-- Head (Logo & Burger Button) -->
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="#"><img src="/img/logo.png" style="height: 50px; width: 109px;" title="Gotjeh"></a>
+            <a class="navbar-brand" href="#"><img src="/img/logo.png" style="height: 50px; width: 109px;"
+                    title="Gotjeh"></a>
             <!-- Burger Button & Dropdown -->
             <div class="dropdown">
                 <img src="/img/burger-button.png" onclick="myFunction()" class="dropbtn">
@@ -36,22 +54,32 @@
             <div class="row">
                 <nav class="col left">
                     <ul class="nav flex-column">
-                        <li><a href="#one" class="nav-link current text-white my-2 activ" data-toggle="tab">1. Sejarah UIUX</a></li>
+                        <li><a href="#one" class="nav-link current text-white my-2 activ" data-toggle="tab">1. Sejarah
+                                UIUX</a></li>
                         <li><a href="#two" class="nav-link text-white my-2" data-toggle="tab">2. Dasar UIUX</a></li>
-                        <li><a href="#three" class="nav-link text-white my-2" data-toggle="tab">3. Perbandingan UIUX</a></li>
-                        <li><a href="#four" class="nav-link text-white my-2" data-toggle="tab">4. Design Thinking</a></li>
+                        <li><a href="#three" class="nav-link text-white my-2" data-toggle="tab">3. Perbandingan UIUX</a>
+                        </li>
+                        <li><a href="#four" class="nav-link text-white my-2" data-toggle="tab">4. Design Thinking</a>
+                        </li>
                         <li><a href="#five" class="nav-link text-white my-2" data-toggle="tab">5. Design Split</a></li>
-                        <li><a href="#six" class="nav-link text-white my-2" data-toggle="tab">6. Conduct Research</a></li>
-                        <li><a href="#seven" class="nav-link text-white my-2" data-toggle="tab">7. UI Fundamental</a></li>
-                        <li><a href="#eight" class="nav-link text-white my-2" data-toggle="tab">8. Desain Landing Page</a></li>
+                        <li><a href="#six" class="nav-link text-white my-2" data-toggle="tab">6. Conduct Research</a>
+                        </li>
+                        <li><a href="#seven" class="nav-link text-white my-2" data-toggle="tab">7. UI Fundamental</a>
+                        </li>
+                        <li><a href="#eight" class="nav-link text-white my-2" data-toggle="tab">8. Desain Landing
+                                Page</a></li>
                     </ul>
                 </nav>
-            </div>                 
+            </div>
         </div>
-        
+
         <!-- Copyright -->
         <div id="footer">
-            <center><p>Copyright © <script>document.write(new Date().getFullYear());</script> Gotjeh</p></center>
+            <center>
+                <p>Copyright © <script>
+                        document.write(new Date().getFullYear());
+                    </script> Gotjeh</p>
+            </center>
         </div>
         <!-- End of Copyright -->
 
@@ -62,7 +90,25 @@
             <div class="tab-content flex-center">
 
                 <div class="tab-pane fade show active" id="one">
-                    <div class="typeform-widget" data-url="https://form.typeform.com/to/rlwcUnqw?typeform-medium=embed-snippet"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+                    <div class="typeform-widget"
+                        data-url="https://form.typeform.com/to/rlwcUnqw?typeform-medium=embed-snippet"></div>
+                    <script>
+                        (function () {
+                            var qs, js, q, s, d = document,
+                                gi = d.getElementById,
+                                ce = d.createElement,
+                                gt = d.getElementsByTagName,
+                                id = "typef_orm",
+                                b = "https://embed.typeform.com/";
+                            if (!gi.call(d, id)) {
+                                js = ce.call(d, "script");
+                                js.id = id;
+                                js.src = b + "embed.js";
+                                q = gt.call(d, "script")[0];
+                                q.parentNode.insertBefore(js, q)
+                            }
+                        })()
+                    </script>
                 </div>
 
                 <div class="tab-pane fade show" id="two">
@@ -103,9 +149,9 @@
         function myFunction() {
             document.getElementById("myDropdown").classList.toggle("show");
         }
-    
+
         // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (!event.target.matches('.dropbtn')) {
                 var dropdowns = document.getElementsByClassName("dropdown-content");
                 var i;
@@ -124,8 +170,8 @@
 
     <!-- Internal JavaScript -->
     <script type="text/javascript">
-        $(document).ready(function() {
-            $("ul li a").click(function() {
+        $(document).ready(function () {
+            $("ul li a").click(function () {
                 $("li a").removeClass('activ');
                 $(this).addClass('activ');
             });
@@ -134,6 +180,7 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-     
+
 </body>
-</html> 
+
+</html>

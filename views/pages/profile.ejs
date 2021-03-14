@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
 
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.jpg">
+    <!-- favicon  -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -72,12 +73,12 @@
                         <div class="center">
                             <p class="atas">
                                 <% let totalDesain=0 %>
-                                    <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
-                                        <% if (resultUserCourse[index].course_details.category.name=='Desain' ) { %>
-                                            <% totalDesain +=1 %>
-                                                <% } %>
-                                                    <% } %>
-                                                        <%= totalDesain %>
+                                <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
+                                <% if (resultUserCourse[index].course_details.category.name=='Desain' ) { %>
+                                <% totalDesain +=1 %>
+                                <% } %>
+                                <% } %>
+                                <%= totalDesain %>
                             </p>
                             <p class="bawah">Kelas Desain</p>
                         </div>
@@ -86,13 +87,13 @@
                         <div class="left">
                             <p class="atas">
                                 <% let totalDigitalMarketing=0 %>
-                                    <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
-                                        <% if (resultUserCourse[index].course_details.category.name=='Digital Marketing'
+                                <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
+                                <% if (resultUserCourse[index].course_details.category.name=='Digital Marketing'
                                             ) { %>
-                                            <% totalDigitalMarketing +=1 %>
-                                                <% } %>
-                                                    <% } %>
-                                                        <%= totalDigitalMarketing %>
+                                <% totalDigitalMarketing +=1 %>
+                                <% } %>
+                                <% } %>
+                                <%= totalDigitalMarketing %>
                             </p>
                             <p class="bawah">Kelas Digital Marketing</p>
                         </div>
@@ -112,21 +113,21 @@
         </div>
         <div class="row kursus">
             <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
-                <div class="col-lg course">
-                    <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>"><img class="foto"
-                            src="/img/branding-course.jpg" alt="1"></a>
-                    <div class="free">
-                        <p>Gratis</p>
-                    </div>
-                    <div class="ds-kursus">
-                        <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>" class="ds-course">
-                            <p>
-                                <%= resultUserCourse[index].course_details.title %>
-                            </p>
-                        </a>
-                    </div>
+            <div class="col-lg course">
+                <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>"><img class="foto"
+                        src="/img/branding-course.jpg" alt="1"></a>
+                <div class="free">
+                    <p>Gratis</p>
                 </div>
-                <% } %>
+                <div class="ds-kursus">
+                    <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>" class="ds-course">
+                        <p>
+                            <%= resultUserCourse[index].course_details.title %>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <% } %>
         </div>
     </div>
 </body>
