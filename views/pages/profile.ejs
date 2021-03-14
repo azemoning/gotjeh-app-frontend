@@ -31,9 +31,11 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top" id="sideNav">
         <div class="sidebar">
-            <center><img src="/img/team-1.png" class="photo-profil">
-                <p class="nama">Abdoel Memed</a></p>
-                <a class="btn btn-edit" href="/profile/edit">Edit Profil</a>
+            <center><img src="/img/avatar-pict.jpg" class="photo-profil">
+                <p class="nama">
+                    <%= resultUserData.firstname + ' ' + resultUserData.lastname %> </a>
+                </p>
+                <a class="btn btn-edit" href="/profile/edit/<%= resultUserData.id %> ">Edit Profil</a>
                 <p><a href="/" class="txt">Beranda</a></p>
                 <p><a href="/job" class="txt">Pekerjaan</a></p>
                 <p><a href="/course" class="txt">Kursus</a></p>
@@ -45,9 +47,11 @@
             <br>
             <!-- Copyright -->
             <div id="footer">
-                <p>Copyright © <script>
+                <p>Copyright ©
+                    <script>
                         document.write(new Date().getFullYear());
-                    </script> Gotjeh</p>
+                    </script> Gotjeh
+                </p>
             </div>
             <!-- End of Copyright -->
         </div>
@@ -59,19 +63,25 @@
                 <div class="row">
                     <div class="col">
                         <div class="left">
-                            <p class="atas">6</p>
+                            <p class="atas">
+                                <%= resultUserCourse.length %>
+                            </p>
                             <p class="bawah">Semua Kelas</p>
                         </div>
                     </div>
                     <div class="col">
                         <div class="center">
-                            <p class="atas">3</p>
+                            <p class="atas">
+                                <%= resultUserCourse.length %>
+                            </p>
                             <p class="bawah">Kelas Desain</p>
                         </div>
                     </div>
                     <div class="col">
                         <div class="left">
-                            <p class="atas">3</p>
+                            <p class="atas">
+                                <%= resultUserCourse.length %>
+                            </p>
                             <p class="bawah">Digital Marketing</p>
                         </div>
                     </div>
@@ -80,7 +90,7 @@
         </div>
         <div class="row ml-auto add-course">
             <div class="col-6" style="margin-left: -15px;">
-                <a class="btn btn-add" href="">Tambah Kursus</a>
+                <a class="btn btn-add" href="/course">Tambah Kursus</a>
             </div>
             <div class="col-2">
                 <div class="bar-srch">
@@ -89,33 +99,22 @@
             </div>
         </div>
         <div class="row kursus">
-            <div class="col-lg course">
-                <a href="#"><img class="foto" src="/img/branding-course.jpg" alt="1"></a>
-                <div class="free">
-                    <p>Gratis</p>
+            <% for( let index=0; index < resultUserCourse.length; index++ ) { %>
+                <div class="col-lg course">
+                    <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>"><img class="foto"
+                            src="/img/branding-course.jpg" alt="1"></a>
+                    <div class="free">
+                        <p>Gratis</p>
+                    </div>
+                    <div class="ds-kursus">
+                        <a href="/course/tutorials/<%= resultUserCourse[index].course_id %>" class="ds-course">
+                            <p>
+                                <%= resultUserCourse[index].course_id %>
+                            </p>
+                        </a>
+                    </div>
                 </div>
-                <div class="ds-kursus">
-                    <a href="#" class="ds-course"><p>Belajar Mengaji</p></a>
-                </div>
-            </div>
-            <div class="col-lg course">
-                <a href="#"><img class="foto" src="/img/branding-course.jpg" alt="2"></a>
-                <div class="free">
-                    <p>Gratis</p>
-                </div>
-                <div class="ds-kursus">
-                    <a href="#" class="ds-course"><p>Belajar Menagih Hutang</p></a>
-                </div>
-            </div>
-            <div class="col-lg course">
-                <a href="#"><img class="foto" src="/img/branding-course.jpg" alt="3"></a>
-                <div class="free">
-                    <p>Gratis</p>
-                </div>
-                <div class="ds-kursus">
-                    <a href="#" class="ds-course"><p>Belajar Menggocek</p></a>
-                </div>
-            </div>
+                <% } %>
         </div>
     </div>
 </body>

@@ -69,8 +69,10 @@
                                         <% } else { %>
                                             <% if (result.price==0) { %>
                                                 <div class="btn-desk">
-                                                    <a href="/course/tutorials/<%= result.id %> "
-                                                        class="btn btn-mulai">Mulai Kelas</a>
+                                                    <form action="/course/enroll/<%= result.id %>" method="post">
+                                                        <input class="btn btn-mulai" type="submit" value="Mulai Kelas">
+                                                        <!-- <inp class="btn btn-mulai">Mulai Kelas</submit> -->
+                                                    </form>
                                                 </div>
                                                 <% } else { %>
                                                     <div class="btn-desk">
