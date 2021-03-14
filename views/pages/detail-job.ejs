@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
 
     <!-- favicon  -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -32,72 +32,70 @@
 
 <body>
     <% if (session.token) { %>
-        <%- include("../partials/navbar-user.ejs") %>
-            <% } else { %>
-                <%- include("../partials/navbar.ejs") %>
-                    <% } %>
+    <%- include("../partials/navbar-user.ejs") %>
+    <% } else { %>
+    <%- include("../partials/navbar.ejs") %>
+    <% } %>
 
-                        <!-- Jumbotron + Foto + Title + Button -->
-                        <section class="jumbotron">
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-10 descript">
-                                        <div class="row">
-                                            <div class="col-10.5 desc">
-                                                <div class="desk-course">
-                                                    <p class="title">
-                                                        <%= result.job_name %>
-                                                    </p>
-                                                </div>
-                                                <div class="gambar-desk">
-                                                    <img class="gmbr" src="/img/<%= result.thumbnail %>">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+    <!-- Jumbotron + Foto + Title + Button -->
+    <section class="jumbotron">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 descript">
+                    <div class="row">
+                        <div class="col-10.5 desc">
+                            <div class="desk-course">
+                                <p class="title">
+                                    <%= result.job_name %>
+                                </p>
                             </div>
-                        </section>
-                        <!-- End of Jumbotron -->
+                            <div class="gambar-desk">
+                                <img class="gmbr" src="/img/<%= result.thumbnail %>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Jumbotron -->
 
-                        <!-- Deskripsi Job -->
-                        <section class="deskripsi-job">
-                            <div class="container">
-                                <div class="row justify-content-center">
-                                    <div class="col-10 descript">
-                                        <div class="row">
-                                            <div class="col-10.5 desc">
-                                                <h3>Deskripsi Pekerjaan</h3>
-                                                <pre class="deskripsi" id="job-content">
+    <!-- Deskripsi Job -->
+    <section class="deskripsi-job">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-10 descript">
+                    <div class="row">
+                        <div class="col-10.5 desc">
+                            <h3>Deskripsi Pekerjaan</h3>
+                            <pre class="deskripsi" id="job-content">
                                                     <%= '\n' + result.content %>
                                                 </pre>
-                                                <a href="#"
-                                                    class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">
-                                                    <%= result.fee %>
-                                                </a>
-                                                <a href="#"
-                                                    class="btn btn-outline-light text-dark mb-3 ml-3 shadow bg-body rounded">
-                                                    <%= result.category.name %>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="btn-desk">
-                                        <% if (!session.token) { %>
-                                            <a href="/login" type="submit" class="btn btn-mulai">Daftar
-                                                Sekarang</a>
-                                            <% } else { %>
-                                                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=<%= result.job_email %>&su=Lamaran Freelance <%= result.job_name %>"
-                                                    type="submit" class="btn btn-mulai" target="_blank">Daftar
-                                                    Sekarang</a>
-                                                <% } %>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- End of Deskripsi Kelas -->
+                            <a href="#" class="btn btn-outline-light text-dark mb-3 shadow bg-body rounded">
+                                <%= result.fee %>
+                            </a>
+                            <a href="#" class="btn btn-outline-light text-dark mb-3 ml-3 shadow bg-body rounded">
+                                <%= result.category.name %>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-desk">
+                    <% if (!session.token) { %>
+                    <a href="/login" type="submit" class="btn btn-mulai">Daftar
+                        Sekarang</a>
+                    <% } else { %>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=<%= result.job_email %>&su=Lamaran Freelance <%= result.job_name %>"
+                        type="submit" class="btn btn-mulai" target="_blank">Daftar
+                        Sekarang</a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Deskripsi Kelas -->
 
-                        <%- include("../partials/footer.ejs") %>
+    <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>

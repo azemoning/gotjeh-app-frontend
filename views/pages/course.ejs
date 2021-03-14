@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
 
     <!-- favicon  -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.jpg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -32,88 +32,82 @@
 
 <body>
     <% if (session.token) { %>
-        <%- include("../partials/navbar-user.ejs") %>
-            <% } else { %>
-                <%- include("../partials/navbar.ejs") %>
+    <%- include("../partials/navbar-user.ejs") %>
+    <% } else { %>
+    <%- include("../partials/navbar.ejs") %>
+    <% } %>
+
+    <!-- Jumbotron -->
+    <section class="jumbotron jumbotron-fluid">
+        <div class="box-container">
+            <div class="col-12">
+                <h3 class="get-job text-capitalize">Yuk, Tingkatkan Keterampilanmu Sekarang!</h3>
+                <p class="dscrb-title">Daripada nganggur di rumah, mending belajar hal-hal baru di
+                    sini deh! <br>
+                    Semuanya gratis dan bisa diakses kapan aja</p>
+
+                <form action="/course" method="GET">
+                    <div class="row justify-content-center">
+                        <div class="bar-srch">
+                            <input type="text" name="search" placeholder="masukkan minimal 3 karakter">
+                            <input type="submit" value="" style="display: none;">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="row justify-content-center pd-shorts">
+                    <p class="shortby mr-3 my-auto">Kategori:</p>
+                    <button class="btn btn-outline-light shorts mr-3" onclick="location.href='/course'">Semua</button>
+                    <% for( let index=0; index < categories.length; index++ ) { %>
+                    <button class="btn btn-outline-light shorts mr-3"
+                        onclick="location.href='/course?category=<%= categories[index].id %>'">
+                        <%= categories[index].name %>
+                    </button>
                     <% } %>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Jumbotron -->
 
-                        <!-- Jumbotron -->
-                        <section class="jumbotron jumbotron-fluid">
-                            <div class="box-container">
-                                <div class="col-12">
-                                    <h3 class="get-job text-capitalize">Yuk, Tingkatkan Keterampilanmu Sekarang!</h3>
-                                    <p class="dscrb-title">Daripada nganggur di rumah, mending belajar hal-hal baru di
-                                        sini deh! <br>
-                                        Semuanya gratis dan bisa diakses kapan aja</p>
-
-                                    <form action="/course" method="GET">
-                                        <div class="row justify-content-center">
-                                            <div class="bar-srch">
-                                                <input type="text" name="search"
-                                                    placeholder="masukkan minimal 3 karakter">
-                                                <input type="submit" value="" style="display: none;">
-                                            </div>
-                                        </div>
-                                    </form>
-
-                                    <div class="row justify-content-center pd-shorts">
-                                        <p class="shortby mr-3 my-auto">Kategori:</p>
-                                        <button class="btn btn-outline-light shorts mr-3"
-                                            onclick="location.href='/course'">Semua</button>
-                                        <% for( let index=0; index < categories.length; index++ ) { %>
-                                            <button class="btn btn-outline-light shorts mr-3"
-                                                onclick="location.href='/course?category=<%= categories[index].id %>'">
-                                                <%= categories[index].name %>
-                                            </button>
-                                            <% } %>
-                                    </div>
-                                </div>
+    <!-- List Course -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 popular-course"></div>
+            <div class="row">
+                <% for( let i=0; i < result.length; i++ ) { %>
+                <div class="col-3 course">
+                    <a href="/course/detail/<%= result[i].id %> "><img src="/img/<%= result[i].thumbnail %>"
+                            class="card-img-top" alt="Image course"></a>
+                    <div class="card-body">
+                        <div class="row">
+                            <% if (result[i].price==0){ %>
+                            <div class="col-4 free">
+                                <p>Gratis</p>
                             </div>
-                        </section>
-                        <!-- End of Jumbotron -->
-
-                        <!-- List Course -->
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-12 popular-course"></div>
-                                <div class="row">
-                                    <% for( let i=0; i < result.length; i++ ) { %>
-                                        <div class="col-3 course">
-                                            <a href="/course/detail/<%= result[i].id %> "><img
-                                                    src="/img/<%= result[i].thumbnail %>" class="card-img-top"
-                                                    alt="Image course"></a>
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <% if (result[i].price==0){ %>
-                                                        <div class="col-4 free">
-                                                            <p>Gratis</p>
-                                                        </div>
-                                                        <% } else { %>
-                                                            <div class="col-4 free">
-                                                                <p>Premium</p>
-                                                            </div>
-                                                            <div class="col-5 free">
-                                                                <p>Rp <%= result[i].price %>
-                                                                </p>
-                                                            </div>
-
-                                                            <% } %>
-                                                </div>
-                                                <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>"
-                                                        class="text-dark">
-                                                        <%= result[i].title %>
-                                                    </a></h5>
-                                            </div>
-                                        </div>
-                                        <% } %>
-
-                                </div>
+                            <% } else { %>
+                            <div class="col-4 free">
+                                <p>Premium</p>
                             </div>
+                            <div class="col-5 free">
+                                <p>Rp <%= result[i].price %></p>
+                            </div>
+                            <% } %>
                         </div>
-                        </div>
-                        <!-- End of List Course -->
+                        <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>" class="text-dark">
+                                <%= result[i].title %>
+                            </a></h5>
+                    </div>
+                </div>
+                <% } %>
 
-                        <%- include("../partials/footer.ejs") %>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- End of List Course -->
+
+    <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>
