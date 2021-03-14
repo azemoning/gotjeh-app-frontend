@@ -4,7 +4,6 @@ const router = require("express").Router();
 
 const baseUrl = process.env.API_URL;
 // const baseUrl = "http://gotjeh-backend-develop.herokuapp.com";
-// const baseUrl = "http://localhost:3000";
 
 
 router.get("/", (req, res) => {
@@ -39,21 +38,25 @@ router.post("/forgot", async (req, res) => {
 });
 
 router.get("/login", (req, res) => {
-  res.render("auth/login");
+  res.render("auth/login", { loginError: { code: "" } });
 });
 
 router.post("/login", async (req, res) => {
-  // console.log(req.body);
   try {
     return axios
       .post(`${baseUrl}/api/auth/login`, req.body)
       .then((result) => {
-        // console.log(result);
         req.session.token = result.data.token;
         req.session.user_id = result.data.id;
         res.redirect("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (err.response.data.code == 404) {
+          res.render("auth/login", { loginError: err.response.data })
+        } else if (err.response.data.code == 401) {
+          res.render("auth/login", { loginError: err.response.data })
+        }
+      });
   } catch (error) {
     console.log(error);
   }
@@ -65,18 +68,21 @@ router.get("/logout", (req, res) => {
 });
 
 router.get("/register", (req, res) => {
-  res.render("auth/register");
+  res.render("auth/register", { registerError: { code: "" } });
 });
 
 router.post("/register", async (req, res) => {
-  // console.log(req.body);
   try {
     return axios
       .post(`${baseUrl}/api/auth/register`, req.body)
       .then((result) => {
         res.redirect("/login");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        if (err.response.data.code == 401) {
+          res.render("auth/register", { registerError: err.response.data })
+        }
+      });
   } catch (error) {
     console.log(error);
   }
