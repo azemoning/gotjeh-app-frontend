@@ -140,8 +140,7 @@ input[type=text] {
     height: 380px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-inline: 38px;
-    position:relative;
+    margin-inline: 40px;
 }    
 
 .foto {

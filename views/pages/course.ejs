@@ -74,19 +74,49 @@
     <div class="container">
         <div class="row justify-content-center">
             <% for( let i=0; i < result.length; i++ ) { %>
-            <div class="row">
-                <div class="col-3 course" style="border-radius: 10px; margin-bottom: -30px; height: 336px;">
-                    <a href="/course/detail/<%= result[i].id %> "><img src="/img/<%= result[i].thumbnail %>" class="card-img-top" alt="Image course"></a>
-                    <div class="card-body">
-                        <div class="free">
-                            <% if (result[i].price==0){ %>
-                            <p>Gratis</p>
-                            <% } else { %>
-                            <p>Premium</p>
-                                <%= result[i].price %>
-                            <% } %>
+            <div class="col-12 popular-course"></div>
+                <div class="row">
+                    <div class="col-3 course">
+                        <a href="/course/detail/<%= result[i].id %> "><img src="/img/<%= result[i].thumbnail %>" class="card-img-top" alt="Image course"></a>
+                        <div class="card-body">
+                            <div class="free">
+                                <% if (result[i].price==0){ %>
+                                <p>Gratis</p>
+                                <% } else { %>
+                                <p>Premium</p>
+                                    <%= result[i].price %>
+                                <% } %>
+                            </div>
+                            <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>" class="text-dark"><%= result[i].title %></a></h5>
                         </div>
-                        <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>" class="text-dark"><%= result[i].title %></a></h5>
+                    </div>
+                    <div class="col-3 course">
+                        <a href="/course/detail/<%= result[i].id %> "><img src="/img/<%= result[i].thumbnail %>" class="card-img-top" alt="Image course"></a>
+                        <div class="card-body">
+                            <div class="free">
+                                <% if (result[i].price==0){ %>
+                                <p>Gratis</p>
+                                <% } else { %>
+                                <p>Premium</p>
+                                    <%= result[i].price %>
+                                <% } %>
+                            </div>
+                            <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>" class="text-dark"><%= result[i].title %></a></h5>
+                        </div>
+                    </div>
+                    <div class="col-3 course">
+                        <a href="/course/detail/<%= result[i].id %> "><img src="/img/<%= result[i].thumbnail %>" class="card-img-top" alt="Image course"></a>
+                        <div class="card-body">
+                            <div class="free">
+                                <% if (result[i].price==0){ %>
+                                <p>Gratis</p>
+                                <% } else { %>
+                                <p>Premium</p>
+                                    <%= result[i].price %>
+                                <% } %>
+                            </div>
+                            <h5 class="card-title"><a href="/course/detail/<%= result[i].id %>" class="text-dark"><%= result[i].title %></a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
